@@ -8,15 +8,24 @@
       <br />
       <input v-model="inputSearchQuery" />
       <button class="set-filter-btn" @click="setSearchQuery(inputSearchQuery)" />
+      <br>
+
+      <Product name="Käse" style="background-color: lightgreen;"/>
+      <Product name="Schinken" style="background-color: lightyellow;"/>
+      <Product name="Mehl"/>
     </div>
     <p></p>
   </div>
 </template>
 
 <script>
+import Product from "@/components/product/Product";
+
 export default {
   name: "Products",
-  components: {},
+  components: {
+    Product
+  },
   data: () => {
     return {
       text: "Hier finden Sie alle Produkte von Kuro. "

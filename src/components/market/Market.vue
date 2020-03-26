@@ -1,6 +1,6 @@
 <template>
     <div class="market">
-        <img class="shop-image" src="../../assets/logo.svg" alt="shop-logo">
+        <img class="shop-image" src="@/assets/logo.svg" alt="shop-logo">
         <span class="shop-name" v:bind="prop-name">{{ name }}</span>
     </div>    
 </template>
@@ -8,7 +8,7 @@
 <script>
 export default {
     name: "Market",
-    props:{
+    props: {
         name
     },
     // data: () => {
