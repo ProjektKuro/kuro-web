@@ -37,11 +37,11 @@ body {
 
 @media screen and (min-width: 544px)  {
   .content {
-    margin: 1rem 35%;
+    margin: 1rem 30%;
   }
 }
 
 .content {
-  margin: 1rem 15%;
+  margin: 1rem 1.25rem;
 }
 </style>
