@@ -2,7 +2,7 @@
   <div>
     <a>{{ searchBoxDefault }}</a>
     <br />
-    <input v-model="searchBoxDefault" class="searchBar" />
+    <input v-model="searchBoxDefault" class="searchBar"  />
   </div>
 </template>
 
