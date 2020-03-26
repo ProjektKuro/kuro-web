@@ -1,5 +1,11 @@
 <template>
   <div class="markets">
-    <p>This is an markets page</p>
+    <p>Hier entsteht die Supermarktseite.</p>
   </div>
 </template>
+
+<style scoped>
+.markets {
+  text-align: left;
+}
+</style>

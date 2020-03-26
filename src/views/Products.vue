@@ -4,9 +4,10 @@
       <span>{{ text }}</span>
       <br />
       <br />
-      <span>Produktfilter: {{ searchQuery }}</span>
+      <span class="search-filter">Produktfilter: {{ inputSearchQuery }}</span>
       <br />
-      <input v-model="searchQuery" />
+      <input v-model="inputSearchQuery" />
+      <button class="set-filter-btn" @click="setSearchQuery(inputSearchQuery)" />
     </div>
     <p></p>
   </div>
@@ -21,24 +22,25 @@ export default {
       text: "Hier finden Sie alle Produkte von Kuro. "
           + "Wenn Sie nach einem bestimmten Produkt suchen,"
           + " dann geben Sie den Namen unten in das Suchfeld ein.",
-      searchQuery: ""
+      inputSearchQuery: "",
+      _searchQuery: ""
     };
+  },
+  methods: {
+    setSearchQuery(query) {
+      this.data._searchQuery = query; 
+    },
+    getSearchQuery() {
+      return this.data._searchQuery;
+    }
   }
 };
 </script>
 
 <style scoped>
-@media screen and (min-width: 544px) and (min-width: 1024px) {
-  .products {
-    margin: 1rem 35%;
-  }
-}
-
-.products {
-  margin: 1rem 10%;
-}
 
 .productFilter {
   text-align: left;
+  word-wrap: break-word;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>Über Kuro</h1>
+    <span class="heading">Über Kuro</span>
     <p>
       Kuro ist eine Anwendung für alle. Mit Kuro kann man den Produktstatus der nächsten Supermärkte abrufen und 
       die Produktverfügbarkeit überprüfen bevor man sich (vergeblich) auf den Weg macht.
@@ -9,16 +9,12 @@
 </template>
 
 <style scoped>
-
-
-@media screen and (min-width: 544px) and (min-width: 1024px) {
-  .about {
-    margin: 1rem 35%;
-  }
+.about {
+  text-align: left;
 }
 
-.about {
-  margin: 1rem 15%;
-  text-align: left;
+.heading {
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 </style>
