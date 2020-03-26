@@ -1,13 +1,14 @@
 <template>
   <div id="nav">
     <div class="logo-container">
-        <img alt="Vue logo" class="kuro-logo" src="../assets/kuro-animated.gif" />
+      <img alt="Vue logo" class="kuro-logo" src="../assets/kuro-animated.gif" />
     </div>
+    <span class="kuro-header-name">kuro.</span>
     <div>
-      <router-link to="/">Start</router-link> |
-      <router-link to="/markets">Supermärkte</router-link> |
-      <router-link to="/products">Produkte</router-link> |
-      <router-link to="/about">Info</router-link>
+      <router-link class="navbar-link" to="/"> Start </router-link>
+      <router-link class="navbar-link" to="/markets">Supermärkte</router-link>
+      <router-link class="navbar-link" to="/products">Produkte</router-link>
+      <router-link class="navbar-link" to="/about">Info</router-link>
     </div>
   </div>
 </template>
@@ -16,7 +17,7 @@
 #nav {
   padding: 30px;
   vertical-align: center;
-  margin: 0 auto;
+  margin: 0.5rem auto;
   margin-bottom: 1rem;
 }
 
@@ -24,6 +25,15 @@
   font-weight: bold;
   color: #2c3e50;
   text-decoration: none;
+  margin: 0 0.5rem;
+  padding: 0 0.1rem;
+  border-bottom: 1px solid lightgrey;
+  /* border-bottom-right-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem; */
+}
+
+#nav a:hover {
+  color: #2c3e65;
 }
 
 #nav a.router-link-exact-active {
@@ -31,11 +41,10 @@
 }
 
 .logo-container {
-  margin: 1rem auto;
+  margin: 0.25rem auto;
   background-color: #ffcf02;
   width: 7rem;
   height: 7rem;
-  margin-bottom: 1.5rem;
   border-radius: 50%;
   padding: 0.5rem;
 }
@@ -45,5 +54,12 @@
   /* margin: 0.25rem auto; */
   height: 6.7rem;
   width: 5.5rem;
+}
+
+.kuro-header-name {
+  font: 1.875rem bold;
+  padding: 0.25rem;
+  margin: 0.5rem auto;
+  
 }
 </style>
