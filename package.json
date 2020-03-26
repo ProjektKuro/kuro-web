@@ -1,6 +1,8 @@
 {
   "name": "kuro-web",
   "version": "0.1.0",
+  "author": "Sven Patrick Meier <sven.patrick.meier@gmail.com>",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
