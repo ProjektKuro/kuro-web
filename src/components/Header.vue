@@ -2,9 +2,11 @@
   <div id="nav">
     <div class="logo-container">
       <div class="logo-image-container" @click="hoothoot()">
-        <img alt="Vue logo" class="kuro-logo" src="../assets/kuro-animated.gif" />
+        <img alt="Vue logo" class="kuro-logo" src="../assets/logo.svg" />
       </div>
-      <span class="kuro-header-name">kuro.</span>
+      <!--
+        <span class="kuro-header-name">kuro.</span>
+      -->
     </div>
     <div class="navbar-elements">
       <!-- <router-link class="navbar-link" to="/"> Start </router-link> -->
@@ -29,7 +31,7 @@ export default {
 
 <style scoped>
 #nav {
-  padding: 30px;
+  padding: 20px;
   vertical-align: center;
   margin: 0.5rem auto;
   margin-bottom: 1rem;
@@ -37,7 +39,8 @@ export default {
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #fff;
+  /* color: #2c3e50; */
   text-decoration: none;
   margin: 0 0.5rem;
   padding: 0 0.1rem;
@@ -51,7 +54,7 @@ export default {
 }
 
 #nav a.router-link-exact-active {
-  color: #fff;
+  color: #f18d5d;
 }
 
 .logo-container {
@@ -60,7 +63,6 @@ export default {
 
 .logo-image-container {
   margin: inherit;
-  background-color: #ffcf02;
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
@@ -75,8 +77,8 @@ export default {
 .kuro-logo {
   /* text-align: center; */
   /* margin: 0.25rem auto; */
-  height: 6.7rem;
-  width: 5.5rem;
+  height: 7.5rem;
+  width: 7.5rem;
 }
 
 .kuro-header-name {
