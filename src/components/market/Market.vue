@@ -3,7 +3,7 @@
         <img class="shop-image" src="@/assets/ic_markt.svg" alt="shop-logo">
         <div class="shop-text">
           <span class="shop-name" v:bind="prop-name">{{ name }}</span>
-          <span class="shop-adress" v:bind="prop-name">Adresse</span>
+          <span class="shop-adress" v:bind="prop-address">{{ address }}</span>
         </div>
     </div>
 </template>
@@ -11,8 +11,10 @@
 <script>
 export default {
     name: "Market",
+    address: "",
     props: {
-        name
+        name: String, 
+        address: String,
     },
     // data: () => {
     //     return {};

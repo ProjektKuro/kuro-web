@@ -21,10 +21,11 @@
 export default {
   name: "Header",
   methods: {
-    hoothoot: () => {
-      console.log("click.. braces yourselves the hoot is coming.");
-      return new Audio("../assets/owl1.wav").play();
-    }
+    // Easter egg from Dev team. CURRENTLY NOT WORKING.
+    // hoothoot: () => {
+    //   console.log("click.. braces yourselves the hoot is coming.");
+    //   return new Audio("../assets/owl1.wav").play();
+    // }
   }
 };
 </script>

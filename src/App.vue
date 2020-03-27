@@ -21,9 +21,6 @@ export default {
 <style>
 body {
   background-color: #0f576d;
-  /* font-size: 12px; */
-  /* background-color: #6dd3fc; */
-  /* background-color: #c6e3e6; */
   text-align: left;
 }
 
@@ -45,8 +42,9 @@ body {
 .content {
   margin: 1rem 1.25rem;
 }
-.content p {
-color: #fff;
+.content p, span {
+  color: #fff;
 }
+
 
 </style>

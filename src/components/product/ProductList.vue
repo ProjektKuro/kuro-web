@@ -12,7 +12,7 @@
 export default {
   name: "ProductList",
   props: {
-    list
+    list: []
   }
 };
 </script>
