@@ -2,6 +2,10 @@
 
 Web Frontend Entwicklung für Projekt Kuro, entwickelt mit `Vue.js.`
 
+## Aktueller Stand von `kuro-web`.
+
+
+
 ## Project setup
 
 ```console
