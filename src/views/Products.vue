@@ -1,7 +1,11 @@
 <template>
   <div class="products">
     <div class="productFilter">
-      <span>{{ text }}</span>
+      <p>
+        Hier finden Sie alle Produkte von Kuro.
+        Wenn Sie nach einem bestimmten Produkt suchen,
+        dann geben Sie den Namen unten in das Suchfeld ein.
+      </p>
       <br />
       <br />
       <span class="search-filter">Produktfilter: {{ inputSearchQuery }}</span>
@@ -51,5 +55,6 @@ export default {
 .productFilter {
   text-align: left;
   word-wrap: break-word;
+  color: inherit;
 }
 </style>

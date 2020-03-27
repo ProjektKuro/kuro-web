@@ -20,9 +20,7 @@ export default {
 
 <style>
 body {
-  background-color: #c6e3e6;
-  /* font-size: 12px; */
-  /* background-color: #6dd3fc; */
+  background-color: #0f576d;
   text-align: left;
 }
 
@@ -32,7 +30,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin: 1rem 2rem;
+  margin: 1rem 1rem;
 }
 
 @media screen and (min-width: 544px)  {
@@ -44,4 +42,9 @@ body {
 .content {
   margin: 1rem 1.25rem;
 }
+.content p, span {
+  color: #fff;
+}
+
+
 </style>

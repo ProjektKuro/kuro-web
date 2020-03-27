@@ -49,7 +49,10 @@
       "parser": "@typescript-eslint/parser"
     },
     "rules": {
-      "no-extra-parens":[ "warn", "all"]
+      "no-extra-parens": [
+        "warn",
+        "all"
+      ]
     }
   },
   "browserslist": [
