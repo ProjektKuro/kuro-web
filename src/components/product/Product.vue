@@ -43,6 +43,9 @@ export default {
   border: 1px solid lightgray;
 }
 
+.product p, span {
+    color: #000;
+}
 .product {
     text-align: center;
     margin: .5rem 0.25rem;

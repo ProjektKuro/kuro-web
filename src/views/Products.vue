@@ -1,22 +1,31 @@
 <template>
   <div class="products">
+    <p>
+      Hier finden Sie alle Produkte von Kuro.
+      Wenn Sie nach einem bestimmten Produkt suchen,
+      dann geben Sie den Namen unten in das Suchfeld ein.
+    </p>
+    <br />
     <div class="productFilter">
-      <p>
-        Hier finden Sie alle Produkte von Kuro.
-        Wenn Sie nach einem bestimmten Produkt suchen,
-        dann geben Sie den Namen unten in das Suchfeld ein.
-      </p>
-      <br />
-      <br />
-      <span class="search-filter">Produktfilter: {{ inputSearchQuery }}</span>
-      <br />
-      <input v-model="inputSearchQuery" />
-      <button class="set-filter-btn" @click="setSearchQuery(inputSearchQuery)" />
-      <br>
-
-      <Product name="Käse" style="background-color: lightgreen;"/>
-      <Product name="Schinken" style="background-color: lightyellow;"/>
-      <Product name="Mehl"/>
+      
+      <div class="filter-container">
+        <div class="filter-container-content">
+          <input
+            class="searchbox-filter"
+            v-model="_searchQuery"
+            placeholder="Suchbegriff eingeben..."
+          />
+          <button class="set-filter-btn" @click="setSearchQuery(_searchQuery)">suchen</button>
+        </div>
+      </div>
+      <div>
+        <span class="search-filter">Produktfilter:</span>
+        <span>{{ inputSearchQuery }}</span>
+      </div>
+      
+      <Product name="Käse" style="background-color: lightgreen;" />
+      <Product name="Schinken" style="background-color: lightyellow;" />
+      <Product name="Mehl" />
     </div>
     <p></p>
   </div>
@@ -32,16 +41,12 @@ export default {
   },
   data: () => {
     return {
-      text: "Hier finden Sie alle Produkte von Kuro. "
-          + "Wenn Sie nach einem bestimmten Produkt suchen,"
-          + " dann geben Sie den Namen unten in das Suchfeld ein.",
-      inputSearchQuery: "",
       _searchQuery: ""
     };
   },
   methods: {
     setSearchQuery(query) {
-      this.data._searchQuery = query; 
+      this.data._searchQuery = query;
     },
     getSearchQuery() {
       return this.data._searchQuery;
@@ -51,10 +56,36 @@ export default {
 </script>
 
 <style scoped>
-
+.filter-container {
+  height: 1.3rem;
+  max-width: 50%;
+  background-color: aliceblue;
+  margin: 0.25rem auto;
+  padding: 0.5rem;
+  border-radius: 2.5rem;
+}
+.filter-container-content {
+  margin-bottom: 0.25rem;
+  vertical-align: center;
+}
+.products p, span {
+    text-align: left;
+}
 .productFilter {
-  text-align: left;
+  text-align: center;
   word-wrap: break-word;
   color: inherit;
+}
+
+.searchbox-filter:active {
+  margin-left: 0.5rem;
+  height: 1.194rem;
+  /* border: none; */
+  /* border: 1px solid green; */
+}
+.set-filter-btn {
+  margin-right: 0.5rem;
+  height: 1.5rem;
+  text-transform: capitalize;
 }
 </style>
