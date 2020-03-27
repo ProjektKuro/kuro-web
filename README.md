@@ -6,7 +6,9 @@ Web Frontend Entwicklung für Projekt Kuro, entwickelt mit `Vue.js.`
 
 Folgende Screenshots zeigen den aktuellsten Stand (Stand: 27.03.2020) von `kuro-web`.
 
-![kuro-web](./readme-res/kuro-web)
+![kuro-web](./readme-res/kuro-web.png)
+![kuro-web-mobile](./readme-res/kuro-web-mobile.png)
+![kuro-web-response](./readme-res/kuro-web-responsive.png)
 
 ## Project setup
 
