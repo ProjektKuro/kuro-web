@@ -21,13 +21,18 @@
         <span class="search-filter">Produktfilter:</span>
         <span>{{ searchQuery }}</span>
       </div>
+    </div>
 
-      <div id="products">
-        <Product
-          v-for="(product, i) in products"
-          :key="`Lang${i}`"
-          :name="$t(`Products.${product.name}`)"
-        />
+    <div id="products">
+      <div
+        v-for="(product, i) in products"
+        :key="`Lang${i}`"
+        :class="{ active: productIdSelected === product.name }"
+        @click="selectProduct(product.name)"
+        class="product"
+      >
+        <ProductDetails :product="product" v-if="productIdSelected === product.name" />
+        <Product :product="product" v-else />
       </div>
     </div>
     <p></p>
@@ -36,16 +41,19 @@
 
 <script>
 import Product from "@/components/product/Product";
+import ProductDetails from "@/components/product/ProductDetails";
 
 export default {
   name: "Products",
   components: {
-    Product
+    Product,
+    ProductDetails
   },
   data: () => {
     return {
       searchQuery: "",
-      products: []
+      products: [],
+      productIdSelected: ""
     };
   },
   created() {
@@ -78,6 +86,13 @@ export default {
     },
     getSearchQuery() {
       return this.data.searchQuery;
+    },
+    selectProduct(name) {
+      if (this.productIdSelected === name) {
+        this.productIdSelected = "";
+      } else {
+        this.productIdSelected = name;
+      }
     }
   }
 };
@@ -87,6 +102,13 @@ export default {
 #products {
   display: flex;
   flex-wrap: wrap;
+}
+.product {
+  width: calc(100% / 4);
+  transition: all 0.35s ease-in-out;
+}
+.product.active {
+  width: 100%;
 }
 .filter-container {
   height: 1.3rem;
