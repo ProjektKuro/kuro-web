@@ -3,7 +3,7 @@
         <img class="shop-image" src="@/assets/ic_markt.svg" alt="shop-logo">
         <div class="shop-text">
           <span class="shop-name" v:bind="prop-name">{{ name }}</span>
-          <span class="shop-adress" v:bind="prop-address">{{ address }}</span>
+          <span class="shop-address" v:bind="prop-address">{{ address }}</span>
         </div>
     </div>
 </template>
@@ -48,10 +48,14 @@ export default {
     max-width: 3.5rem;
 }
 
-.shop-text{
+.shop-text {
     margin: 0.5rem 0.75rem;
     display: block;
-    color: 0f576d;
+}
+
+.shop-text .shop-name,
+.shop-text .shop-address {
+    color: #0f576d;
 }
 
 .shop-name {
@@ -60,7 +64,7 @@ export default {
     text-transform: uppercase;
 }
 
-.shop-adress{
+.shop-address {
     display: block;
 }
 </style>
