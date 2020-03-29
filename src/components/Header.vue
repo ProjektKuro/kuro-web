@@ -8,6 +8,7 @@
         <span class="kuro-header-name">kuro.</span>
       -->
     </div>
+    <LocaleChanger />
     <div class="navbar-elements">
       <!-- <router-link class="navbar-link" to="/"> Start </router-link> -->
       <router-link class="navbar-link" to="/about">{{ $t('Info') }}</router-link>
@@ -18,8 +19,12 @@
 </template>
 
 <script>
+import LocaleChanger from "../components/LocaleChanger";
 export default {
   name: "Header",
+  components: {
+    LocaleChanger
+  },
   methods: {
     // Easter egg from Dev team. CURRENTLY NOT WORKING.
     // hoothoot: () => {
@@ -34,8 +39,7 @@ export default {
 #nav {
   padding: 20px;
   vertical-align: center;
-  margin: 0.5rem auto;
-  margin-bottom: 1rem;
+  position: relative;
 }
 
 #nav a {
