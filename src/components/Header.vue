@@ -2,7 +2,7 @@
   <div id="nav">
     <div class="logo-container">
       <div class="logo-image-container" @click="hoothoot()">
-        <img alt="Vue logo" class="kuro-logo" src="../assets/logo.svg" />
+        <img alt="Kuro logo" class="kuro-logo" src="../assets/logo.svg" />
       </div>
       <!--
         <span class="kuro-header-name">kuro.</span>
