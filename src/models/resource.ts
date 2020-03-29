@@ -1,6 +1,5 @@
 import { Product } from './product';
 import { Shop } from './shop';
-
 interface IResourceUpdate {
     timeStamp: Date;
     body: Resource;

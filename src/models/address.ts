@@ -1,5 +1,4 @@
 import { Resource } from './resource';
-
 export class Address extends Resource {
     private _address: string;
     private _postCode: string;
@@ -19,5 +18,4 @@ export class Address extends Resource {
     get postCode(): string {
         return this._postCode;
     }
-
 }

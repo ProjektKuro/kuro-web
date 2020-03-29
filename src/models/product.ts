@@ -7,7 +7,6 @@ enum EProductStatus{
 export class Product extends Resource {
     private _name: string;
     private _status: string;
-
     constructor (json: any) {
         super(json);
         this._name = json?.name;
