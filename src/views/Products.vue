@@ -23,7 +23,11 @@
       </div>
 
       <div id="products">
-        <Product v-for="(product, i) in products" :key="`Lang${i}`" :name="product.name" />
+        <Product
+          v-for="(product, i) in products"
+          :key="`Lang${i}`"
+          :name="`Products.${product.name}`"
+        />
       </div>
     </div>
     <p></p>
