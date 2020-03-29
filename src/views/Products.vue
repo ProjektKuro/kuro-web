@@ -26,7 +26,7 @@
         <Product
           v-for="(product, i) in products"
           :key="`Lang${i}`"
-          :name="`Products.${product.name}`"
+          :name="$t(`Products.${product.name}`)"
         />
       </div>
     </div>
