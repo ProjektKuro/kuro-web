@@ -26,11 +26,11 @@ export default {
     getIcon(locale) {
       switch (locale) {
         case "de":
-          return "../assets/lang_germany.svg";
+          return "./img/lang_germany.svg";
         case "da":
-          return "../assets/lang_denmark.svg";
+          return "./img/lang_denmark.svg";
         default:
-          return "../assets/lang_united-kingdom.svg";
+          return "./img/lang_united-kingdom.svg";
       }
     },
     changeLocale(locale) {
@@ -51,6 +51,11 @@ export default {
   font-size: 16px;
   border: none;
   cursor: pointer;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: #c6e2e6;
 }
 .dropdown {
   position: relative;
@@ -59,9 +64,9 @@ export default {
 .dropdown-box {
   display: none;
   position: absolute;
-  background-color: hsl(0, 0%, 98%);
+  /* background-color: hsl(0, 0%, 98%); */
   /* min-width: 160px; */
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
   z-index: 99;
 }
 .dropdown-content {
