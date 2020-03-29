@@ -40,18 +40,19 @@ export default {
   },
   mounted() {
     this.initMap();
-    // this.initLayers();
+    this.initLayers();
   },
   methods: {
     initMap() {
       this.map = L.map("map").setView(
         [this.ownPosition.latitude, this.ownPosition.longitude],
-        12
+        15
       );
       this.tileLayer = L.tileLayer(
         "https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png",
         {
           maxZoom: 18,
+          minZoom: 12,
           attribution:
             '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>'
         }
