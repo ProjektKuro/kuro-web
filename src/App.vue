@@ -22,6 +22,7 @@ export default {
 body {
   background-color: #0f576d;
   text-align: left;
+  margin: 0;
 }
 
 #app {
@@ -30,7 +31,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin: 1rem 1rem;
 }
 
 @media screen and (min-width: 544px)  {
