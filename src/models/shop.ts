@@ -27,4 +27,7 @@ export class Shop extends Resource {
     set products(products: Products) {
         this._products = products;
     }
+    update = () => {
+        super.update(this);
+    }
 }
