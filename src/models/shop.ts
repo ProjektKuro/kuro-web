@@ -24,6 +24,9 @@ export class Shop extends Resource {
     set address(address: Address) {
         this._address = address;
     }
+    get name() {
+        return this._name;
+    }
     get position(): IPosition {
         return this._position;
     }
