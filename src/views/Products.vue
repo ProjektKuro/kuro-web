@@ -7,7 +7,6 @@
     </p>
     <br />
     <div class="productFilter">
-      
       <div class="filter-container">
         <div class="filter-container-content">
           <input
@@ -22,10 +21,8 @@
         <span class="search-filter">Produktfilter:</span>
         <span>{{ inputSearchQuery }}</span>
       </div>
-      
-      <Product name="Käse" style="background-color: lightgreen;" />
-      <Product name="Schinken" style="background-color: lightyellow;" />
-      <Product name="Mehl" />
+
+      <Product v-for="(product, i) in products" :key="`Lang${i}`" :name="product.name" />
     </div>
     <p></p>
   </div>
@@ -41,8 +38,33 @@ export default {
   },
   data: () => {
     return {
-      _searchQuery: ""
+      _searchQuery: "",
+      products: []
     };
+  },
+  created() {
+    // GET request
+    this.$http
+      .get("https://kuro.tlahmann.com/api/products", {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "POST, GET, PUT, OPTIONS, DELETE",
+          "Access-Control-Allow-Headers":
+            "Access-Control-Allow-Methods, Access-Control-Allow-Origin, Origin, Accept, Content-Type",
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        }
+      })
+      .then(
+        success => {
+          // get body data
+          this.products = success.body.products;
+        },
+        failure => {
+          // error callback
+          console.log(failure);
+        }
+      );
   },
   methods: {
     setSearchQuery(query) {
@@ -68,8 +90,9 @@ export default {
   margin-bottom: 0.25rem;
   vertical-align: center;
 }
-.products p, span {
-    text-align: left;
+.products p,
+span {
+  text-align: left;
 }
 .productFilter {
   text-align: center;
