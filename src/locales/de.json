@@ -10,6 +10,27 @@
     "AboutKuro": "Über Kuro",
     "AboutKuroDescription": "Kuro ist eine Anwendung für alle. Mit Kuro kann man den Produktstatus der nächsten Supermärkte abrufen und die Produktverfügbarkeit überprüfen bevor man sich (vergeblich) auf den Weg macht."
   },
-  "Products": "Produkte",
+  "Products": {
+    "Products": "Produkte",
+    "Brot": "Brot",
+    "Damenhygiene": "Damenhygiene",
+    "Desinfektionsmittel": "Desinfektionsmittel",
+    "Eier": "Eier",
+    "Fertiggerichte": "Fertiggerichte",
+    "Gemüsekonserven": "Gemüsekonserven",
+    "Hefe": "Hefe",
+    "Kartoffeln": "Kartoffeln",
+    "Klopapier": "Klopapier",
+    "Mehl": "Mehl",
+    "Milch": "Milch",
+    "Nudeln": "Nudeln",
+    "Öl": "Öl",
+    "Reis": "Reis",
+    "Säuglingsnahrung": "Säuglingsnahrung",
+    "Seife": "Seife",
+    "Tomatenkonserven": "Tomatenkonserven",
+    "Waschmittel": "Waschmittel",
+    "Windeln": "Windeln"
+  },
   "Supermarkets": "Supermärkte"
 }

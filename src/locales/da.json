@@ -10,6 +10,27 @@
     "AboutKuro": "Om Kuro",
     "AboutKuroDescription": "Kuro er en applikation til alle. Med Kuro kan du åbne produktstatus for de næste supermarkeder og kontrollere produkttilgængeligheden, før du tager af sted."
   },
-  "Products": "Produkter",
+  "Products": {
+    "Products": "Produkte",
+    "Brot": "Brød",
+    "Damenhygiene": "Feminin hygiejne",
+    "Desinfektionsmittel": "Desinfektionsmiddel",
+    "Eier": "Æg",
+    "Fertiggerichte": "Færdig mad",
+    "Gemüsekonserven": "Dåse grøntsager",
+    "Hefe": "Gær",
+    "Kartoffeln": "Kartofler",
+    "Klopapier": "Toiletpapir",
+    "Mehl": "Mel",
+    "Milch": "Mælk",
+    "Nudeln": "Nudler",
+    "Öl": "Olie",
+    "Reis": "Ris",
+    "Säuglingsnahrung": "Babymad",
+    "Seife": "Sæbe",
+    "Tomatenkonserven": "Dåsede tomater",
+    "Waschmittel": "Vaskemiddel",
+    "Windeln": "Bleer"
+  },
   "Supermarkets": "Supermarkeder"
 }

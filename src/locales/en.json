@@ -10,6 +10,27 @@
     "AboutKuro": "About Kuro",
     "AboutKuroDescription": "Kuro is an application for everyone. With Kuro you can call up the product status of your local supermarkets and check the product availability before you set off."
   },
-  "Products": "Products",
+  "Products": {
+    "Products": "Products",
+    "Brot": "Bread",
+    "Damenhygiene": "Feminine hygiene",
+    "Desinfektionsmittel": "Sanitizer",
+    "Eier": "Eggs",
+    "Fertiggerichte": "Prepared dishes",
+    "Gemüsekonserven": "Tinned vegetables",
+    "Hefe": "Yeast",
+    "Kartoffeln": "Potatoes",
+    "Klopapier": "Toilettepaper",
+    "Mehl": "Flour",
+    "Milch": "Milk",
+    "Nudeln": "Noodles",
+    "Öl": "Oil",
+    "Reis": "Rice",
+    "Säuglingsnahrung": "Baby food",
+    "Seife": "Soap",
+    "Tomatenkonserven": "Tinned tomatoes",
+    "Waschmittel": "Detergent",
+    "Windeln": "Diaper"
+  },
   "Supermarkets": "Supermarkets"
 }
