@@ -9,7 +9,7 @@
 <script>
 export default {
   name: "SearchBar",
-  data() {
+  data: () => {
     return {
       searchBoxDefault: "Begriff zum Suchen eingeben..."
     };
