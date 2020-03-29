@@ -1,5 +1,14 @@
 {
-  "Info": "Informationen",
+  "Language": {
+    "ChangeLanguage": "Sprache ändern",
+    "de": "Deutsch",
+    "en": "Englisch"
+  },
+  "Info": {
+    "Info": "Informationen",
+    "AboutKuro": "Über Kuro",
+    "AboutKuroDescription": "Kuro ist eine Anwendung für alle. Mit Kuro kann man den Produktstatus der nächsten Supermärkte abrufen und die Produktverfügbarkeit überprüfen bevor man sich (vergeblich) auf den Weg macht."
+  },
   "Products": "Produkte",
   "Supermarkets": "Supermärkte"
 }

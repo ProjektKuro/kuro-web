@@ -1,7 +1,7 @@
 <template>
   <div class="locale-changer">
     <div class="dropdown">
-      <img alt="Change Language" :src="getIcon(this.$i18n.locale)" />
+      <img :alt="$t('Language.ChangeLanguage')" :src="getIcon(this.$i18n.locale)" />
       <div class="dropdown-box">
         <div
           v-for="(lang, i) in langs"
@@ -9,7 +9,7 @@
           class="dropdown-content"
           v-on:click="changeLocale(lang)"
         >
-          <img :alt="lang" :src="getIcon(lang)" />
+          <img :alt="$t(`Language.${lang}`)" :src="getIcon(lang)" />
         </div>
       </div>
     </div>
