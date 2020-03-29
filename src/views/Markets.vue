@@ -1,12 +1,12 @@
 <template>
   <div class="markets">
     <p>Hier entsteht die Supermarktseite.</p>
-    <Market name="Rewe" address="Virchow-Straße 66"/>
-    <Market name="Kaufland" address="Blaubeurer Straße"/>
-    <Market name="Edeka" address="Blaubeurer Straße"/>
-    <Market name="Netto" address="Söflinger Straße"/>
-    <Market name="Norma" address="Ehinger Straße"/>
-    <Market name="Edeka" address="Bayern, is es alles das selbe"/>
+    <Market
+      v-for="(shop, i) in shops"
+      :key="`Lang${i}`"
+      :name="shop.name"
+      :address="shop.address.address"
+    />
   </div>
 </template>
 
@@ -16,8 +16,40 @@ export default {
   name: "Markets",
   components: {
     Market
+  },
+  data() {
+    return {
+      shops: []
+    };
+  },
+  created() {
+    // GET request
+    this.$http
+      .get(
+        "https://kuro.tlahmann.com/api/shops?lat=48.39841&long=9.99155&distance=2000&pageSize=25&page=0&include=address",
+        {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "POST, GET, PUT, OPTIONS, DELETE",
+            "Access-Control-Allow-Headers":
+              "Access-Control-Allow-Methods, Access-Control-Allow-Origin, Origin, Accept, Content-Type",
+            "Content-Type": "application/json",
+            Accept: "application/json"
+          }
+        }
+      )
+      .then(
+        success => {
+          // get body data
+          this.shops = success.body.shops;
+        },
+        failure => {
+          // error callback
+          console.log(failure);
+        }
+      );
   }
-}
+};
 </script>
 
 <style scoped>
