@@ -1,4 +1,9 @@
 import { Resource } from "./resource";
+enum EProductStatus{
+    empty = "empty",
+    enough = "normal",
+    much = "much"
+}
 export class Product extends Resource {
     private _name: string;
     private _status: string;
@@ -11,16 +16,18 @@ export class Product extends Resource {
     get name(): string {
         return this._name;
     }
-    set name(nameUpdate: string) {
-        this._name = nameUpdate;
-    }
     get status(): string {
         return this._status;
     }
     set status(statusUpdate: string) {
-        this._status = statusUpdate
+        // Must be valid Status: "much"
+        if(statusUpdate in EProductStatus) {
+            //todo: add error notification via snackbar-notifier
+            return;
+        }
+        this._status = statusUpdate;
     }
-    update = (productUpdate: Product) => {
-        super.update(productUpdate);
+    update = () => {
+        super.update(this);
     }
 }

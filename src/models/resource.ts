@@ -3,6 +3,7 @@ import { Shop } from './shop';
 
 interface IResourceUpdate {
     timeStamp: Date;
+    body: Resource;
 }
 export class Resource {
     _id: string;
@@ -14,9 +15,6 @@ export class Resource {
         this._updatedAt = new Date(json?.updatedAt || '');
     }
     update = <T extends Resource>(updateData: T): void => {
-        // taking timestamp of when this method is invoked to have a new value for updatedAt property
-        const timeStamp = new Date();
-        updateData._updatedAt = timeStamp;
         // Todo: Add when Service exists.
     };
     get id(): string {
@@ -28,8 +26,4 @@ export class Resource {
     get updatedAt(): Date {
         return this._updatedAt;
     }
-    set updatedAt(updateDate: Date) {
-        this._updatedAt = updateDate;
-    }
-
 }
