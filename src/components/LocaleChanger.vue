@@ -20,15 +20,17 @@
 export default {
   name: "LocaleChanger",
   data() {
-    return { langs: ["en", "de"] };
+    return { langs: ["de", "en", "da"] };
   },
   methods: {
     getIcon(locale) {
       switch (locale) {
         case "de":
-          return "../assets/lang_ger.svg";
+          return "../assets/lang_germany.svg";
+        case "da":
+          return "../assets/lang_denmark.svg";
         default:
-          return "../assets/lang_eng.svg";
+          return "../assets/lang_united-kingdom.svg";
       }
     },
     changeLocale(locale) {
@@ -62,9 +64,11 @@ export default {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 99;
 }
+.dropdown-content {
+  text-align: left;
+}
 /* Links inside the dropdown */
-.dropdown-content img,
-.dropdown-content p {
+.dropdown-content img {
   display: inline-block;
   color: black;
   padding: 6px;

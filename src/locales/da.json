@@ -1,0 +1,15 @@
+{
+  "Language": {
+    "ChangeLanguage": "Skift sprog",
+    "da": "Dansk",
+    "de": "Tysk",
+    "en": "Englisk"
+  },
+  "Info": {
+    "Info": "Informationer",
+    "AboutKuro": "Om Kuro",
+    "AboutKuroDescription": "Kuro er en applikation til alle. Med Kuro kan du åbne produktstatus for de næste supermarkeder og kontrollere produkttilgængeligheden, før du tager af sted."
+  },
+  "Products": "Produkter",
+  "Supermarkets": "Supermarkeder"
+}
