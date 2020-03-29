@@ -15,7 +15,7 @@
       v-for="(shop, i) in shops"
       :key="`Lang${i}`"
       :name="shop.name"
-      :address="shop.address.address"
+      :address="shop.address"
     />
   </div>
 </template>
