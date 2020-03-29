@@ -30,7 +30,7 @@ export default {
     display: flex;
     flex-direction: row;
     border: 1px solid lightgray;
-    border-radius: 1rem;
+    border-radius: 5px;
     box-shadow: 2px 4px 6px 1px rgba(0,0,0,0.2);
     transition: 0.3s;
     padding: 0.5rem;

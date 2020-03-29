@@ -11,18 +11,20 @@
         <div class="filter-container-content">
           <input
             class="searchbox-filter"
-            v-model="_searchQuery"
+            v-model="searchQuery"
             placeholder="Suchbegriff eingeben..."
           />
-          <button class="set-filter-btn" @click="setSearchQuery(_searchQuery)">suchen</button>
+          <button class="set-filter-btn" @click="setSearchQuery(searchQuery)">suchen</button>
         </div>
       </div>
       <div>
         <span class="search-filter">Produktfilter:</span>
-        <span>{{ inputSearchQuery }}</span>
+        <span>{{ searchQuery }}</span>
       </div>
 
-      <Product v-for="(product, i) in products" :key="`Lang${i}`" :name="product.name" />
+      <div id="products">
+        <Product v-for="(product, i) in products" :key="`Lang${i}`" :name="product.name" />
+      </div>
     </div>
     <p></p>
   </div>
@@ -38,7 +40,7 @@ export default {
   },
   data: () => {
     return {
-      _searchQuery: "",
+      searchQuery: "",
       products: []
     };
   },
@@ -68,16 +70,20 @@ export default {
   },
   methods: {
     setSearchQuery(query) {
-      this.data._searchQuery = query;
+      this.data.searchQuery = query;
     },
     getSearchQuery() {
-      return this.data._searchQuery;
+      return this.data.searchQuery;
     }
   }
 };
 </script>
 
 <style scoped>
+#products {
+  display: flex;
+  flex-wrap: wrap;
+}
 .filter-container {
   height: 1.3rem;
   max-width: 50%;
