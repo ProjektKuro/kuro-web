@@ -10,9 +10,9 @@
     </div>
     <div class="navbar-elements">
       <!-- <router-link class="navbar-link" to="/"> Start </router-link> -->
-      <router-link class="navbar-link" to="/about">Info</router-link>
-      <router-link class="navbar-link" to="/products">Produkte</router-link>
-      <router-link class="navbar-link" to="/markets">Supermärkte</router-link>
+      <router-link class="navbar-link" to="/about">{{ $t('Info') }}</router-link>
+      <router-link class="navbar-link" to="/products">{{ $t('Products') }}</router-link>
+      <router-link class="navbar-link" to="/markets">{{ $t('Supermarkets') }}</router-link>
     </div>
   </div>
 </template>

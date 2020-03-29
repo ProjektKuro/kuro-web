@@ -1,25 +1,27 @@
 {
   "name": "kuro-web",
   "version": "0.1.0",
-  "author": "Sven Patrick Meier <sven.patrick.meier@gmail.com>",
-  "license": "MIT",
   "private": true,
+  "author": "Sven Patrick Meier <sven.patrick.meier@gmail.com>",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
   },
   "dependencies": {
     "core-js": "^3.6.4",
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.2",
+    "vue-i18n": "^8.0.0",
     "vue-property-decorator": "^8.3.0",
     "vue-router": "^3.1.5",
     "vuex": "^3.1.2"
   },
   "devDependencies": {
     "@types/jest": "^25.1.4",
+    "@types/webpack": "^4.4.0",
     "@typescript-eslint/eslint-plugin": "^2.18.0",
     "@typescript-eslint/parser": "^2.18.0",
     "@vue/cli-plugin-babel": "^4.2.0",
@@ -33,6 +35,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.1.2",
     "typescript": "~3.7.5",
+    "vue-cli-plugin-i18n": "~0.6.1",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
@@ -58,5 +61,6 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "license": "MIT"
 }
