@@ -11,26 +11,29 @@
       <i>Getting your location...</i>
     </div>
 
-    <Market
-      v-for="(shop, i) in shops"
-      :key="`Lang${i}`"
-      :name="shop.name"
-      :address="shop.address"
+    <MapView
+      :shops="shops"
+      :ownPosition="{latitude:location.coords.latitude, longitude:location.coords.longitude}"
+      v-if="!gettingLocation && shops.length !== 0"
     />
+
+    <Market v-for="(shop, i) in shops" :key="`Lang${i}`" :name="shop.name" :address="shop.address" />
   </div>
 </template>
 
 <script>
 import Market from "../components/market/Market";
+import MapView from "../components/MapView";
 export default {
   name: "Markets",
   components: {
-    Market
+    Market,
+    MapView
   },
   data() {
     return {
       location: null,
-      gettingLocation: false,
+      gettingLocation: true,
       errorStr: null,
       shops: []
     };
