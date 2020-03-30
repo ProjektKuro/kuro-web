@@ -8,7 +8,8 @@
   "Info": {
     "Info": "Info",
     "AboutKuro": "About Kuro",
-    "AboutKuroDescription": "Kuro is an application for everyone. With Kuro you can call up the product status of your local supermarkets and check the product availability before you set off.",
+    "MotivationHeading": "Kuro's Background",
+    "MotivationDescription": "Kuro originated as an idea for a solution approach to the topic of \"status monitoring of supermarkets\" as part of the \"WirVsVirus Hackathon\". The application was planned and the basis was completely implemented. After the Hackthon the development team decided to continue the development of kuro.",
     "Created": {
       "First": "This site was created during the",
       "Link": "#WirVsVirus hackathon."
