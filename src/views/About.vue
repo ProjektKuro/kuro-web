@@ -11,11 +11,13 @@
         target="_blank"
       >{{$t('Info.Created.Link')}}</a>
     </p>
-    <img
-      class="wir-vs-virus-logo"
-      src="../assets/Logo_WirVsVirus.png"
-      :alt="$t('Info.WirVsVirusLogo')"
-    />
+    <div class="logo-wrapper">
+      <img
+        class="wir-vs-virus-logo"
+        src="../assets/Logo_WirVsVirus.png"
+        :alt="$t('Info.WirVsVirusLogo')"
+      />
+    </div>
   </div>
 </template>
 
@@ -31,7 +33,10 @@
   font-weight: bold;
   font-size: 1.5rem;
 }
-
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+}
 .wir-vs-virus-logo {
   background-color: #20beef;
   width: 100%;
