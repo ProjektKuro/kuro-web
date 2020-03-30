@@ -8,9 +8,15 @@
   "Info": {
     "Info": "Informationen",
     "AboutKuro": "Über Kuro",
-    "AboutKuroDescription": "Kuro ist eine Anwendung für alle. Mit Kuro kann man den Produktstatus der nächsten Supermärkte abrufen und die Produktverfügbarkeit überprüfen bevor man sich (vergeblich) auf den Weg macht."
+    "AboutKuroDescription": "Kuro ist eine Anwendung für alle.Mit Kuro kann man den Produktstatus der nächsten Supermärkte abrufen und die Produktverfügbarkeit überprüfen bevor man sich (vergeblich) auf den Weg macht.",
+    "MotivationHeading": "Kuro's Hintergrund",
+    "MotivationDescription": "Kuro entstand als Idee für einen Lösungsansatz zum Thema \"Status-Monitoring von Supermärkten\" im Rahmen des \"WirVsVirus-Hackathons\". Dabei wurde die Anwendung geplant und der Grundstock komplett umgesetzt. Nach dem Hackthon hat sich das Entwicklungsteam dazu entschieden, die Entwicklung von kuro fortzusetzen."
   },
   "Products": {
+    "ProductsIntroText": "Here you can find and see all products of kuro. If you are looking for a special product enter its name in the givven searchbox below.",
+    "SearchButtonLabel": "Suchen",
+    "SearchButtonPlaceholderText": "Suchbegriff eingeben",
+    "SearchFilterLabel": "Produktfilter",
     "Products": "Produkte",
     "Brot": "Brot",
     "Damenhygiene": "Damenhygiene",

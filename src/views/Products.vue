@@ -1,9 +1,7 @@
 <template>
   <div class="products">
     <p>
-      Hier finden Sie alle Produkte von Kuro.
-      Wenn Sie nach einem bestimmten Produkt suchen,
-      dann geben Sie den Namen unten in das Suchfeld ein.
+      {{ $t('Products.ProductsIntroText') }}
     </p>
     <br />
     <div class="productFilter">
@@ -14,11 +12,11 @@
             v-model="searchQuery"
             placeholder="Suchbegriff eingeben..."
           />
-          <button class="set-filter-btn" @click="setSearchQuery(searchQuery)">suchen</button>
+          <button class="set-filter-btn" @click="setSearchQuery(searchQuery)">{{ $t('Products.SearchButtonLabel') }}</button>
         </div>
       </div>
       <div>
-        <span class="search-filter">Produktfilter:</span>
+        <span class="search-filter">{{ $t('Products.SearchFilterLabel') }}</span>
         <span>{{ searchQuery }}</span>
       </div>
     </div>
