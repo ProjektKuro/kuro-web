@@ -104,6 +104,7 @@ export default {
 .product {
   width: calc(100% / 4);
   transition: all 0.35s ease-in-out;
+  cursor: pointer;
 }
 .product.active {
   width: 100%;
