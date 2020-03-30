@@ -8,7 +8,12 @@
   "Info": {
     "Info": "Informationen",
     "AboutKuro": "Über Kuro",
-    "AboutKuroDescription": "Kuro ist eine Anwendung für alle. Mit Kuro kann man den Produktstatus der nächsten Supermärkte abrufen und die Produktverfügbarkeit überprüfen bevor man sich (vergeblich) auf den Weg macht."
+    "AboutKuroDescription": "Kuro ist eine Anwendung für alle. Mit Kuro kann man den Produktstatus der nächsten Supermärkte abrufen und die Produktverfügbarkeit überprüfen bevor man sich (vergeblich) auf den Weg macht.",
+    "Created": {
+      "First": "Diese Seite wurde erstellt wärend des",
+      "Link": "#WirVsVirus Hackathons."
+    },
+    "WirVsVirusLogo": "#WirVsVirusHack Logo"
   },
   "Products": {
     "Products": "Produkte",
