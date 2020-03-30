@@ -88,6 +88,9 @@ export default {
 <style scoped>
 #map {
   width: 100%;
-  height: 400px;
+  height: 540px;
+  max-width: 720px;
+  margin: 0 auto;
+  border-radius: 5px;
 }
 </style>
