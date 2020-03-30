@@ -26,11 +26,11 @@ export default {
     getIcon(locale) {
       switch (locale) {
         case "de":
-          return "./img/lang_germany.svg";
+          return require("../assets/lang_germany.svg");
         case "da":
-          return "./img/lang_denmark.svg";
+          return require("../assets/lang_denmark.svg");
         default:
-          return "./img/lang_united-kingdom.svg";
+          return require("../assets/lang_united-kingdom.svg");
       }
     },
     changeLocale(locale) {
