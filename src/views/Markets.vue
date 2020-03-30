@@ -69,7 +69,7 @@ export default {
       // GET request
       this.$http
         .get(
-          `https://kuro.tlahmann.com/api/shops?lat=${lat}&long=${long}&distance=2000&pageSize=25&page=0&include=address`,
+          `https://kuro.tlahmann.com/api/shops?lat=${lat}&long=${long}&distance=3000&pageSize=25&page=0&include=address`,
           {
             headers: {
               "Access-Control-Allow-Origin": "*",
