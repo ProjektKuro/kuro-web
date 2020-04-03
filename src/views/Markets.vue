@@ -14,7 +14,7 @@
     <div id="market-search">
       <MapView
         :shops="shops"
-        :ownPosition="{latitude:location.coords.latitude, longitude:location.coords.longitude, }"
+        :ownPosition="{latitude:location.coords.latitude, longitude:location.coords.longitude }"
         v-if="!gettingLocation && shops.length !== 0"
       />
 
