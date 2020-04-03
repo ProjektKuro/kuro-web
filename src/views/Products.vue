@@ -1,9 +1,7 @@
 <template>
   <div class="products">
     <p>
-      Hier finden Sie alle Produkte von Kuro.
-      Wenn Sie nach einem bestimmten Produkt suchen,
-      dann geben Sie den Namen unten in das Suchfeld ein.
+      {{ $t('Products.ProductsIntroText') }}
     </p>
     <br />
     <div class="productFilter">
@@ -14,20 +12,25 @@
             v-model="searchQuery"
             placeholder="Suchbegriff eingeben..."
           />
-          <button class="set-filter-btn" @click="setSearchQuery(searchQuery)">suchen</button>
+          <button class="set-filter-btn" @click="setSearchQuery(searchQuery)">{{ $t('Products.SearchButtonLabel') }}</button>
         </div>
       </div>
       <div>
-        <span class="search-filter">Produktfilter:</span>
+        <span class="search-filter">{{ $t('Products.SearchFilterLabel') }}</span>
         <span>{{ searchQuery }}</span>
       </div>
+    </div>
 
-      <div id="products">
-        <Product
-          v-for="(product, i) in products"
-          :key="`Lang${i}`"
-          :name="$t(`Products.${product.name}`)"
-        />
+    <div id="products">
+      <div
+        v-for="(product, i) in products"
+        :key="`Lang${i}`"
+        :class="{ active: productIdSelected === product.name }"
+        @click="selectProduct(product.name)"
+        class="product"
+      >
+        <ProductDetails :product="product" v-if="productIdSelected === product.name" />
+        <Product :product="product" v-else />
       </div>
     </div>
     <p></p>
@@ -36,16 +39,19 @@
 
 <script>
 import Product from "@/components/product/Product";
+import ProductDetails from "@/components/product/ProductDetails";
 
 export default {
   name: "Products",
   components: {
-    Product
+    Product,
+    ProductDetails
   },
   data: () => {
     return {
       searchQuery: "",
-      products: []
+      products: [],
+      productIdSelected: ""
     };
   },
   created() {
@@ -78,6 +84,13 @@ export default {
     },
     getSearchQuery() {
       return this.data.searchQuery;
+    },
+    selectProduct(name) {
+      if (this.productIdSelected === name) {
+        this.productIdSelected = "";
+      } else {
+        this.productIdSelected = name;
+      }
     }
   }
 };
@@ -87,6 +100,14 @@ export default {
 #products {
   display: flex;
   flex-wrap: wrap;
+}
+.product {
+  width: calc(100% / 4);
+  transition: all 0.35s ease-in-out;
+  cursor: pointer;
+}
+.product.active {
+  width: 100%;
 }
 .filter-container {
   height: 1.3rem;

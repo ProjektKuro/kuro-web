@@ -1,19 +1,19 @@
 <template>
-  <div class="locale-changer">
-    <div class="dropdown">
+  <ul class="locale-changer">
+    <li class="dropdown">
       <img :alt="$t('Language.ChangeLanguage')" :src="getIcon(this.$i18n.locale)" />
-      <div class="dropdown-box">
-        <div
+      <ul class="dropdown-box">
+        <li
           v-for="(lang, i) in langs"
           :key="`Lang${i}`"
           class="dropdown-content"
           v-on:click="changeLocale(lang)"
         >
           <img :alt="$t(`Language.${lang}`)" :src="getIcon(lang)" />
-        </div>
-      </div>
-    </div>
-  </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -26,11 +26,11 @@ export default {
     getIcon(locale) {
       switch (locale) {
         case "de":
-          return "./img/lang_germany.svg";
+          return require("../assets/lang_germany.svg");
         case "da":
-          return "./img/lang_denmark.svg";
+          return require("../assets/lang_denmark.svg");
         default:
-          return "./img/lang_united-kingdom.svg";
+          return require("../assets/lang_united-kingdom.svg");
       }
     },
     changeLocale(locale) {
@@ -39,13 +39,17 @@ export default {
   }
 };
 </script>
+
 <style scoped>
 .locale-changer {
   position: absolute;
+  list-style: none;
   top: 20px;
+  margin: 0;
+  padding: 0;
 }
+
 .locale-changer img {
-  background-color: #4caf50;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -57,38 +61,44 @@ export default {
   transition: 0.3s;
   background-color: #c6e2e6;
 }
+
 .dropdown {
   position: relative;
   display: inline-block;
+  list-style: none;
 }
+
 .dropdown-box {
   display: none;
+  list-style: none;
   position: absolute;
+  min-width:63px;
+  margin: 0;
+  padding: 0;
   /* background-color: hsl(0, 0%, 98%); */
-  /* min-width: 160px; */
   /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
   z-index: 99;
 }
+
 .dropdown-content {
-  text-align: left;
+  margin: 0;
+  text-align: center;
 }
-/* Links inside the dropdown */
+/* Images inside the dropdown */
 .dropdown-content img {
   display: inline-block;
-  color: black;
-  padding: 6px;
-  text-decoration: none;
+  max-width: 30px;
+  padding: 10px;
 }
+
 /* Change color of dropdown links on hover */
-.dropdown-box a:hover {
-  background-color: #f1f1f1;
+.dropdown-box img:hover {
+  background-color: #91c7cf;
 }
+
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-box {
   display: block;
 }
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-}
+
 </style>

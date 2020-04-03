@@ -8,9 +8,33 @@
   "Info": {
     "Info": "Info",
     "AboutKuro": "About Kuro",
-    "AboutKuroDescription": "Kuro is an application for everyone. With Kuro you can call up the product status of your local supermarkets and check the product availability before you set off."
+    "AboutKuroDescription": "With Kuro you can check the product status of your local supermarkets and see the product availability before you set off to shop.",
+    "MotivationHeading": "Kuro's Background",
+    "MotivationDescription": "Kuro originated as an idea for a solution approach to the topic of \"status monitoring of supermarkets\" as part of the \"WirVsVirus Hackathon\". The application was planned and the basis was completely implemented. After the Hackthon the development team decided to continue the development of Kuro.",
+    "Created": {
+      "First": "This site was created during the",
+      "Link": "#WirVsVirus hackathon."
+    },
+    "CurrentState": "Kuro's current state",
+    "CurrentStateDescription": {
+      "Dev": "This is the latest version of Kuro, but so far without functionality on the Products and Supermarkets pages. A working prototype of Kuro-web should be released within the next time. An Android version of Kuro will soon be available for download in the Google Play Store.",
+      "SolutionEnabler": "Kuro was registered in the Solution Enabler program of the WirVsVirus Hackathon."
+    },
+    "NextSteps": "Next Steps for Kuro",
+    "NextStepsDescription": "Here is a list of things that are still planned for Kuro.",
+    "NextStepsDevDescription": {
+      "General": "Release of a beta version for Android, web client to follow.",
+      "GeneralHeading": "General",
+      "Web": "Automation of the deployment",
+      "WebHeading": "Web-Client"
+    },
+    "WirVsVirusLogo": "#WirVsVirusHack Logo"
   },
   "Products": {
+    "ProductsIntroText": "Here you can find and see all products of kuro. If you are looking for a special product enter its name in the given search box below.",
+    "SearchButtonLabel": "Search",
+    "SearchButtonPlaceholderText": "Enter search query",
+    "SearchFilterLabel": "Product filter",
     "Products": "Products",
     "Brot": "Bread",
     "Damenhygiene": "Feminine hygiene",
