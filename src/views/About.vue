@@ -4,22 +4,34 @@
     <p>{{$t('Info.AboutKuroDescription')}}</p>
     <span class="heading">{{$t('Info.MotivationHeading')}}</span>
     <p>{{$t('Info.MotivationDescription')}}</p>
+    <span class="heading">{{$t('Info.CurrentState')}}</span>
+    <p>{{$t('Info.CurrentStateDescription.Dev')}}</p>
+    <p>{{$t('Info.CurrentStateDescription.SolutionEnabler')}}</p>
+    <span class="heading">{{$t('Info.NextSteps')}}</span>
+    <p>{{$t('Info.NextStepsDescription')}}</p>
     <p>
-      {{$t('Info.Created.First')}}
-      <a
-        href="https://wirvsvirushackathon.org/"
-        target="_blank"
-      >{{$t('Info.Created.Link')}}</a>
+      <span class="heading small">{{$t('Info.NextStepsDevDescription.GeneralHeading')}}</span>
+      <ul>
+        <li>{{$t('Info.NextStepsDevDescription.General')}}</li>
+      </ul>
+      <span class="heading small">{{$t('Info.NextStepsDevDescription.WebHeading')}}</span>
+      <ul>
+        <li>{{$t('Info.NextStepsDevDescription.Web')}}</li>
+      </ul>
     </p>
-    <div class="logo-wrapper">
-      <img
-        class="wir-vs-virus-logo"
-        src="../assets/Logo_WirVsVirus.png"
-        :alt="$t('Info.WirVsVirusLogo')"
-      />
-    </div>
+    <Footer/>
   </div>
 </template>
+
+<script>
+import Footer from "@/components/Footer";
+export default {
+  name: "About",
+  components:{
+    Footer
+  }
+}
+</script>
 
 <style scoped>
 .about {
@@ -30,17 +42,11 @@
   margin-top: .8rem;
 }
 .heading {
-  font-weight: bold;
   font-size: 1.5rem;
+  font-weight: bold;
 }
-.logo-wrapper {
-  display: flex;
-  justify-content: center;
+.small {
+  font-size: 1.25rem;
 }
-.wir-vs-virus-logo {
-  background-color: #20beef;
-  width: 100%;
-  max-width: 720px;
-  margin: 0 auto;
-}
+
 </style>

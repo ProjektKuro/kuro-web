@@ -10,10 +10,23 @@
     "AboutKuro": "Über Kuro",
     "AboutKuroDescription": "Mit Kuro kann man den Produktstatus der nächsten Supermärkte abrufen und die Produktverfügbarkeit überprüfen bevor man sich auf den Weg zum Einkaufen macht.",
     "MotivationHeading": "Kuro's Hintergrund",
-    "MotivationDescription": "Kuro entstand als Idee für einen Lösungsansatz zum Thema \"Status-Monitoring von Supermärkten\" im Rahmen des \"WirVsVirus-Hackathons\". Dabei wurde die Anwendung geplant und der Grundstock komplett umgesetzt. Nach dem Hackthon hat sich das Entwicklungsteam dazu entschieden, die Entwicklung von kuro fortzusetzen.",
+    "MotivationDescription": "Kuro entstand als Idee für einen Lösungsansatz zum Thema \"Status-Monitoring von Supermärkten\" im Rahmen des \"WirVsVirus-Hackathons\". Dabei wurde die Anwendung geplant und der Grundstock komplett umgesetzt. Nach dem Hackthon hat sich das Entwicklungsteam dazu entschieden, die Entwicklung von Kuro fortzusetzen.",
     "Created": {
-      "First": "Diese Seite wurde erstellt wärend des",
+      "First": "Diese Seite wurde erstellt während des",
       "Link": "#WirVsVirus Hackathons."
+    },
+    "CurrentState": "Kuro's aktueller Stand",
+    "CurrentStateDescription": {
+      "Dev": "Dies ist die aktuellste Version von Kuro, bisher allerdings noch ohne Funktionalität auf den Seiten Produkte und Supermärkte. Ein funktionierender Prototyp von Kuro-web sollte innerhalb der nächsten Zeit erscheinen. Eine Android-Version von kuro steht zu dem bald zum Download im Google Play Store zur Verfügung.",
+      "SolutionEnabler": "Kuro wurde im Solution Enabler Programm des WirVsVirus-Hackathons angemeldet."
+    },
+    "NextSteps": "Nächste Schritte für Kuro",
+    "NextStepsDescription": "Hier entsteht eine Liste von Dingen, die für Kuro noch geplant sind.",
+    "NextStepsDevDescription": {
+      "General": "Release einer Beta Version für Android, Web-Client folgt.",
+      "GeneralHeading": "Allgemein",
+      "Web": "Automatisierung des Deployments",
+      "WebHeading": "Web-Client"
     },
     "WirVsVirusLogo": "#WirVsVirusHack Logo"},
   "Products": {
