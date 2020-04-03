@@ -19,11 +19,7 @@
       />
 
       <div id="position-properties">
-        <select
-          id="distances"
-          @change="loadData(location.coords.latitude, location.coords.longitude)"
-          v-model="distance"
-        >
+        <select id="distances" @change="updateRadius()" v-model="distance">
           <option value="1000">{{ $t('Markets.Distance', { distance: 1000 }) }}</option>
           <option value="2500" selected>{{ $t('Markets.Distance', { distance: 2500 }) }}</option>
           <option value="5000">{{ $t('Markets.Distance', { distance: 5000 }) }}</option>
@@ -82,16 +78,20 @@ export default {
         this.errorStr = e.message;
       }
     },
+    updateRadius() {
+      this.shops = [];
+      this.loadData();
+    },
     scroll() {
+      let that = this;
       window.onscroll = () => {
         let bottomOfWindow =
           document.documentElement.scrollTop + window.innerHeight ===
           document.documentElement.offsetHeight;
 
-        // console.log("wants to load", !this.gettingLocation && bottomOfWindow);
-        if (!this.gettingLocation && bottomOfWindow) {
-          this.page++;
-          this.loadData();
+        if (!that.gettingLocation && bottomOfWindow) {
+          that.page++;
+          that.loadData();
         }
       };
     },
