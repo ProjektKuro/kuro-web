@@ -15,6 +15,8 @@
       "First": "This site was created during the",
       "Link": "#WirVsVirus hackathon."
     },
+    "CurrentState": "Kuro's current state",
+    "CurrentStateDescription": "This is the latest version of kuro, but so far without functionality on the Products and Supermarkets pages. A working prototype of kuro-web should be released within the next time. An Android version of kuro will soon be available for download in the Google Play Store.",
     "WirVsVirusLogo": "#WirVsVirusHack Logo"
   },
   "Products": {

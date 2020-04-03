@@ -4,13 +4,8 @@
     <p>{{$t('Info.AboutKuroDescription')}}</p>
     <span class="heading">{{$t('Info.MotivationHeading')}}</span>
     <p>{{$t('Info.MotivationDescription')}}</p>
-    <p>
-      {{$t('Info.Created.First')}}
-      <a
-        href="https://wirvsvirushackathon.org/"
-        target="_blank"
-      >{{$t('Info.Created.Link')}}</a>
-    </p>
+    <span class="heading">{{$t('Info.CurrentState')}}</span>
+    <p>{{$t('Info.CurrentStateDescription')}}</p>
     <div class="logo-wrapper">
       <img
         class="wir-vs-virus-logo"
@@ -18,6 +13,13 @@
         :alt="$t('Info.WirVsVirusLogo')"
       />
     </div>
+    <p class="wir-vs-virus-hackathon">
+      {{$t('Info.Created.First')}}
+      <a
+        href="https://wirvsvirushackathon.org/"
+        target="_blank"
+      >{{$t('Info.Created.Link')}}</a>
+    </p>
   </div>
 </template>
 
@@ -30,17 +32,20 @@
   margin-top: .8rem;
 }
 .heading {
-  font-weight: bold;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 .logo-wrapper {
   display: flex;
   justify-content: center;
 }
+.wir-vs-virus-hackathon {
+  text-align: center;
+}
 .wir-vs-virus-logo {
   background-color: #20beef;
-  width: 100%;
-  max-width: 720px;
   margin: 0 auto;
+  max-width: 720px;
+  width: 100%;
 }
 </style>

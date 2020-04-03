@@ -12,9 +12,11 @@
     "MotivationHeading": "Kuro's Hintergrund",
     "MotivationDescription": "Kuro entstand als Idee für einen Lösungsansatz zum Thema \"Status-Monitoring von Supermärkten\" im Rahmen des \"WirVsVirus-Hackathons\". Dabei wurde die Anwendung geplant und der Grundstock komplett umgesetzt. Nach dem Hackthon hat sich das Entwicklungsteam dazu entschieden, die Entwicklung von kuro fortzusetzen.",
     "Created": {
-      "First": "Diese Seite wurde erstellt wärend des",
+      "First": "Diese Seite wurde erstellt während des",
       "Link": "#WirVsVirus Hackathons."
     },
+    "CurrentState": "Kuro's aktueller Stand",
+    "CurrentStateDescription": "Dies ist die aktuellste Version von kuro, bisher allerdings noch ohne Funktionalität auf den Seiten Produkte und Supermärkte. Ein funktionierender Prototyp von kuro-web sollte innerhalb der nächsten Zeit erscheinen. Eine Android-Version von kuro steht zu dem bald zum Download im Google Play Store zur Verfügung.",
     "WirVsVirusLogo": "#WirVsVirusHack Logo"},
   "Products": {
     "ProductsIntroText": "Hier können die Produkte von Kuro durchsucht werden. Geben Sie dafür einfach den Namen des gesuchten Produkts in die Suchbox ein.",
