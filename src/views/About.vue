@@ -19,8 +19,19 @@
         <li>{{$t('Info.NextStepsDevDescription.Web')}}</li>
       </ul>
     </p>
+    <Footer/>
   </div>
 </template>
+
+<script>
+import Footer from "@/components/Footer";
+export default {
+  name: "About",
+  components:{
+    Footer
+  }
+}
+</script>
 
 <style scoped>
 .about {
