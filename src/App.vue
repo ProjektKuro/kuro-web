@@ -4,6 +4,7 @@
     <div class="content">
       <router-view />
     </div>
+    <Footer/>
   </div>
 </template>
 
@@ -30,7 +31,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color:#fff;
 }
 
 @media screen and (min-width: 544px)  {
@@ -42,7 +43,7 @@ body {
 .content {
   margin: 1rem 1.25rem;
 }
-.content p, span {
+.content p, span, li {
   color: #fff;
 }
 

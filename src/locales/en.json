@@ -10,13 +10,24 @@
     "AboutKuro": "About Kuro",
     "AboutKuroDescription": "With Kuro you can check the product status of your local supermarkets and see the product availability before you set off to shop.",
     "MotivationHeading": "Kuro's Background",
-    "MotivationDescription": "Kuro originated as an idea for a solution approach to the topic of \"status monitoring of supermarkets\" as part of the \"WirVsVirus Hackathon\". The application was planned and the basis was completely implemented. After the Hackthon the development team decided to continue the development of kuro.",
+    "MotivationDescription": "Kuro originated as an idea for a solution approach to the topic of \"status monitoring of supermarkets\" as part of the \"WirVsVirus Hackathon\". The application was planned and the basis was completely implemented. After the Hackthon the development team decided to continue the development of Kuro.",
     "Created": {
       "First": "This site was created during the",
       "Link": "#WirVsVirus hackathon."
     },
     "CurrentState": "Kuro's current state",
-    "CurrentStateDescription": "This is the latest version of kuro, but so far without functionality on the Products and Supermarkets pages. A working prototype of kuro-web should be released within the next time. An Android version of kuro will soon be available for download in the Google Play Store.",
+    "CurrentStateDescription": {
+      "Dev": "This is the latest version of Kuro, but so far without functionality on the Products and Supermarkets pages. A working prototype of Kuro-web should be released within the next time. An Android version of Kuro will soon be available for download in the Google Play Store.",
+      "SolutionEnabler": "Kuro was registered in the Solution Enabler program of the WirVsVirus Hackathon."
+    },
+    "NextSteps": "Next Steps for Kuro",
+    "NextStepsDescription": "Here is a list of things that are still planned for Kuro.",
+    "NextStepsDevDescription": {
+      "General": "Release of a beta version for Android, web client to follow.",
+      "GeneralHeading": "General",
+      "Web": "Automation of the deployment",
+      "WebHeading": "Web-Client"
+    },
     "WirVsVirusLogo": "#WirVsVirusHack Logo"
   },
   "Products": {
