@@ -42,7 +42,7 @@ body {
 .content {
   margin: 1rem 1.25rem;
 }
-.content p, span {
+.content p, span, li {
   color: #fff;
 }
 
