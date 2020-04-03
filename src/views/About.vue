@@ -45,3 +45,7 @@ export default {
   font-size: 1.5rem;
   font-weight: bold;
 }
+.small {
+  font-size: 1.25rem;
+}
+</style>
