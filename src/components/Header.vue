@@ -13,7 +13,7 @@
       <!-- <router-link class="navbar-link" to="/"> Start </router-link> -->
       <router-link class="navbar-link" to="/about">{{ $t('Info.Info') }}</router-link>
       <router-link class="navbar-link" to="/products">{{ $t('Products.Products') }}</router-link>
-      <router-link class="navbar-link" to="/markets">{{ $t('Supermarkets') }}</router-link>
+      <router-link class="navbar-link" to="/markets">{{ $t('Markets.Supermarkets') }}</router-link>
     </div>
   </div>
 </template>
