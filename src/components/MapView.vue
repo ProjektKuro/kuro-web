@@ -103,7 +103,8 @@ export default {
   width: 100%;
   height: 540px;
   max-width: 720px;
-  margin: 0 auto;
+  margin-right: 20px;
+  margin-left: auto;
   border-radius: 5px;
 }
 </style>

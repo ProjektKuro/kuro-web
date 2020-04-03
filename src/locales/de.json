@@ -15,7 +15,8 @@
       "First": "Diese Seite wurde erstellt wärend des",
       "Link": "#WirVsVirus Hackathons."
     },
-    "WirVsVirusLogo": "#WirVsVirusHack Logo"},
+    "WirVsVirusLogo": "#WirVsVirusHack Logo"
+  },
   "Products": {
     "ProductsIntroText": "Hier können die Produkte von Kuro durchsucht werden. Geben Sie dafür einfach den Namen des gesuchten Produkts in die Suchbox ein.",
     "SearchButtonLabel": "Suchen",
@@ -42,5 +43,8 @@
     "Waschmittel": "Waschmittel",
     "Windeln": "Windeln"
   },
-  "Supermarkets": "Supermärkte"
+  "Markets": {
+    "Supermarkets": "Supermärkte",
+    "Distance": "{distance} Meter"
+  }
 }

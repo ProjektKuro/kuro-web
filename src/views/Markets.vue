@@ -11,11 +11,26 @@
       <i>Getting your location...</i>
     </div>
 
-    <MapView
-      :shops="shops"
-      :ownPosition="{latitude:location.coords.latitude, longitude:location.coords.longitude}"
-      v-if="!gettingLocation && shops.length !== 0"
-    />
+    <div id="market-search">
+      <MapView
+        :shops="shops"
+        :ownPosition="{latitude:location.coords.latitude, longitude:location.coords.longitude, }"
+        v-if="!gettingLocation && shops.length !== 0"
+      />
+
+      <div id="position-properties">
+        <select
+          id="distances"
+          @change="loadData(location.coords.latitude, location.coords.longitude)"
+          v-model="distance"
+        >
+          <option value="1000">{{ $t('Markets.Distance', { distance: 1000 }) }}</option>
+          <option value="2500" selected>{{ $t('Markets.Distance', { distance: 2500 }) }}</option>
+          <option value="5000">{{ $t('Markets.Distance', { distance: 5000 }) }}</option>
+          <option value="10000">{{ $t('Markets.Distance', { distance: 10000 }) }}</option>
+        </select>
+      </div>
+    </div>
 
     <Market v-for="(shop, i) in shops" :key="`Lang${i}`" :name="shop.name" :address="shop.address" />
   </div>
@@ -33,6 +48,7 @@ export default {
   data() {
     return {
       location: null,
+      distance: 2500,
       gettingLocation: true,
       errorStr: null,
       shops: []
@@ -69,7 +85,7 @@ export default {
       // GET request
       this.$http
         .get(
-          `https://kuro.tlahmann.com/api/shops?lat=${lat}&long=${long}&distance=3000&pageSize=25&page=0&include=address`,
+          `https://kuro.tlahmann.com/api/shops?lat=${lat}&long=${long}&distance=${this.distance}&pageSize=10&page=0&include=address`,
           {
             headers: {
               "Access-Control-Allow-Origin": "*",
@@ -102,5 +118,16 @@ export default {
 <style scoped>
 .markets {
   text-align: left;
+}
+#market-search {
+  display: flex;
+  flex-flow: row;
+  align-content: space-around;
+}
+#position-properties {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(20% - 10px); /* separate properties for IE11 upport */
+  margin-right: auto;
 }
 </style>
