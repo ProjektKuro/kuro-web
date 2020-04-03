@@ -49,6 +49,7 @@ export default {
     return {
       location: null,
       distance: 2500,
+      page: 0,
       gettingLocation: true,
       errorStr: null,
       shops: []
@@ -81,11 +82,33 @@ export default {
         this.errorStr = e.message;
       }
     },
+    scroll() {
+      window.onscroll = () => {
+        let bottomOfWindow =
+          document.documentElement.scrollTop + window.innerHeight ===
+          document.documentElement.offsetHeight;
+
+        // console.log("wants to load", !this.gettingLocation && bottomOfWindow);
+        if (!this.gettingLocation && bottomOfWindow) {
+          this.page++;
+          this.loadData();
+        }
+      };
+    },
     loadData(lat, long) {
+      if (this.gettingLocation) {
+        return;
+      }
+      if (!lat) {
+        lat = this.location.coords.latitude;
+      }
+      if (!long) {
+        long = this.location.coords.longitude;
+      }
       // GET request
       this.$http
         .get(
-          `https://kuro.tlahmann.com/api/shops?lat=${lat}&long=${long}&distance=${this.distance}&pageSize=10&page=0&include=address`,
+          `https://kuro.tlahmann.com/api/shops?lat=${lat}&long=${long}&distance=${this.distance}&pageSize=10&page=${this.page}&include=address`,
           {
             headers: {
               "Access-Control-Allow-Origin": "*",
@@ -100,7 +123,7 @@ export default {
         .then(
           success => {
             // get body data
-            this.shops = success.body.shops;
+            success.body.shops.forEach(s => this.shops.push(s));
           },
           failure => {
             // error callback
@@ -111,6 +134,9 @@ export default {
   },
   created() {
     this.locateMe();
+  },
+  mounted() {
+    this.scroll();
   }
 };
 </script>
