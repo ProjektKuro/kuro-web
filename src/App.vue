@@ -4,16 +4,19 @@
     <div class="content">
       <router-view />
     </div>
+    <Footer/>
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default {
   name: "App",
   components: {
-    Header
+    Header,
+    Footer
   }
 };
 </script>
@@ -30,7 +33,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color:#fff;
 }
 
 @media screen and (min-width: 544px)  {

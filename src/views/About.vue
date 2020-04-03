@@ -19,22 +19,6 @@
         <li>{{$t('Info.NextStepsDevDescription.Web')}}</li>
       </ul>
     </p>
-
-    <!-- WirVsVirus Hackathon Logo -->
-    <div class="logo-wrapper">
-      <img
-        class="wir-vs-virus-logo"
-        src="../assets/Logo_WirVsVirus.png"
-        :alt="$t('Info.WirVsVirusLogo')"
-      />
-    </div>
-    <p class="wir-vs-virus-hackathon">
-      {{$t('Info.Created.First')}}
-      <a
-        href="https://wirvsvirushackathon.org/"
-        target="_blank"
-      >{{$t('Info.Created.Link')}}</a>
-    </p>
   </div>
 </template>
 
@@ -53,17 +37,5 @@
 .small {
   font-size: 1.25rem;
 }
-.logo-wrapper {
-  display: flex;
-  justify-content: center;
-}
-.wir-vs-virus-hackathon {
-  text-align: center;
-}
-.wir-vs-virus-logo {
-  background-color: #20beef;
-  margin: 0 auto;
-  max-width: 720px;
-  width: 100%;
-}
+
 </style>
