@@ -55,5 +55,8 @@
     "Waschmittel": "Waschmittel",
     "Windeln": "Windeln"
   },
-  "Supermarkets": "Supermärkte"
+  "Markets": {
+    "Supermarkets": "Supermärkte",
+    "Distance": "{distance} Meter"
+  }
 }
