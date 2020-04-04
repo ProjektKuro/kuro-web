@@ -1,0 +1,63 @@
+{
+  "Language": {
+    "ChangeLanguage": "Dili degisdir",
+    "da": "Danimarkaca",
+    "de": "Almanca",
+    "en": "Inglizce",
+    "tr": "Türkce"
+  },
+  "Info": {
+    "Info": "Bilgi",
+    "AboutKuro": "Kuronun hakkinda",
+    "AboutKuroDescription": "Kuro ile en yakın süpermarketlerin, alışverişe çıkmadan önce, ürün stock durumunu kontrol edebilirsiniz.",
+    "MotivationHeading": "Kuronun nedeni",
+    "MotivationDescription": "Kuro ile öne sürülen temel fikir süpermarketlerin stock izlenmesini saglamaktir",
+    "Created": {
+      "First": "Bu anasayfa {first} olusmustur",
+      "Link": "#WirVsVirus Hackathons."
+    },
+    "CurrentState": "Kuronun mevcut durumu",
+    "CurrentStateDescription": {
+      "Dev": "Bu, Kuronun en son sürümüdür, ancak şu ana kadar ürünler ve süpermarketler sayfalarında işlevsizdir. Bir sonraki seferde Kuro-web'in çalışan bir prototipi görünmelidir. Kuronun bir Android sürümü yakında Google Play Store'dan indirilebilir.",
+      "SolutionEnabler": "Kuro, WirVsVirus hackathonunun Solution Enabler programına kaydedildi."
+    },
+    "NextSteps": "Kuro için sonraki adımlar",
+    "NextStepsDescription": "Kuro icin planlanan şeylerin listesi.",
+    "NextStepsDevDescription": {
+      "General": "Android için beta sürümü yayınlandı, web istemcisi şöyle.",
+      "GeneralHeading": "Genellikle",
+      "Web": "Deployments otomasyon",
+      "WebHeading": "Web-Client"
+    },
+    "WirVsVirusLogo": "#WirVsVirusHack logo"},
+  "Products": {
+    "ProductsIntroText": "Kuronun ürünlerini burada bulabilirsiniz. Arama kutusuna aradığınız ürünün adını girin.",
+    "SearchButtonLabel": "Arama",
+    "SearchButtonPlaceholderText": "Arama terimini girin",
+    "SearchFilterLabel": "Ürün filtresi",
+    "Products": "Ürünler",
+    "Brot": "Ekmek",
+    "Damenhygiene": "Kadın hijyeni",
+    "Desinfektionsmittel": "Dezenfektan",
+    "Eier": "Yumurta",
+    "Fertiggerichte": "Hazir yemek",
+    "Gemüsekonserven": "Konservedeki sebzeler",
+    "Hefe": "Maya",
+    "Kartoffeln": "Patates",
+    "Klopapier": "Tuvalet kağıdı",
+    "Mehl": "Un",
+    "Milch": "Süt",
+    "Nudeln": "Makarna",
+    "Öl": "Yağ",
+    "Reis": "Pirinç",
+    "Säuglingsnahrung": "Bebek maması",
+    "Seife": "Sabun",
+    "Tomatenkonserven": "Konservedeki domatesler",
+    "Waschmittel": "Deterjan",
+    "Windeln": "Bebek bezleri"
+  },
+  "Markets": {
+    "Supermarkets": "Supermarketler",
+    "Distance": "{distance} Metre"
+  }
+}
