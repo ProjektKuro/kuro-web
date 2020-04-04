@@ -12,20 +12,22 @@
     </div>
 
     <div id="market-search">
+      <div id="position-properties">
+        <select id="distances" @change="updateRadius()" v-model="distance">
+          <option value="1">{{ $t('Markets.Distance', { distance: 1 }) }}</option>
+          <option value="2.5" selected>{{ $t('Markets.Distance', { distance: 2.5 }) }}</option>
+          <option value="5">{{ $t('Markets.Distance', { distance: 5 }) }}</option>
+          <option value="10">{{ $t('Markets.Distance', { distance: 10 }) }}</option>
+        </select>
+      </div>
+
       <MapView
         :shops="shops"
         :ownPosition="{latitude:location.coords.latitude, longitude:location.coords.longitude }"
         v-if="!gettingLocation && shops.length !== 0"
       />
 
-      <div id="position-properties">
-        <select id="distances" @change="updateRadius()" v-model="distance">
-          <option value="1000">{{ $t('Markets.Distance', { distance: 1000 }) }}</option>
-          <option value="2500" selected>{{ $t('Markets.Distance', { distance: 2500 }) }}</option>
-          <option value="5000">{{ $t('Markets.Distance', { distance: 5000 }) }}</option>
-          <option value="10000">{{ $t('Markets.Distance', { distance: 10000 }) }}</option>
-        </select>
-      </div>
+
     </div>
 
     <Market v-for="(shop, i) in shops" :key="`Lang${i}`" :name="shop.name" :address="shop.address" />
@@ -44,7 +46,7 @@ export default {
   data() {
     return {
       location: null,
-      distance: 2500,
+      distance: 2.5,
       page: 0,
       gettingLocation: true,
       errorStr: null,
@@ -108,7 +110,7 @@ export default {
       // GET request
       this.$http
         .get(
-          `https://kuro.tlahmann.com/api/shops?lat=${lat}&long=${long}&distance=${this.distance}&pageSize=10&page=${this.page}&include=address`,
+          `https://kuro.tlahmann.com/api/shops?lat=${lat}&long=${long}&distance=${this.distance*1000}&pageSize=10&page=${this.page}&include=address`,
           {
             headers: {
               "Access-Control-Allow-Origin": "*",
@@ -147,13 +149,29 @@ export default {
 }
 #market-search {
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   align-content: space-around;
+  margin: 0 auto;
 }
+
+#distances{
+  width: 5rem;
+  appearance: none;
+  margin: 10px;
+  padding: 2px 10px;
+  background-color: #c6e2e6;
+  color: #0f576d;
+  background-image:url("../assets/select.svg");
+  background-repeat: no-repeat, repeat;
+  background-position: right .7em top 50%, 0 0;
+  background-size: 0.8rem auto, 80%;
+}
+
 #position-properties {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: calc(20% - 10px); /* separate properties for IE11 upport */
-  margin-right: auto;
+  margin: 0 auto;
 }
+
 </style>

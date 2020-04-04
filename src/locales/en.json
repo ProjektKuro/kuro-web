@@ -56,5 +56,8 @@
     "Waschmittel": "Detergent",
     "Windeln": "Diaper"
   },
-  "Supermarkets": "Supermarkets"
+  "Markets": {
+    "Supermarkets": "Supermarkets",
+    "Distance": "{distance} km"
+  }
 }

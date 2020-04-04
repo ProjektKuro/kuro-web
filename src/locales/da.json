@@ -43,5 +43,8 @@
     "Waschmittel": "Vaskemiddel",
     "Windeln": "Bleer"
   },
-  "Supermarkets": "Supermarkeder"
+  "Markets": {
+    "Supermarkets": "Supermarkeder",
+    "Distance": "{distance} km"
+  }
 }

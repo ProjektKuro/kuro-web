@@ -97,14 +97,13 @@ export default {
   }
 };
 </script>
-    
+
 <style scoped>
 #map {
   width: 100%;
   height: 540px;
   max-width: 720px;
-  margin-right: 20px;
-  margin-left: auto;
+  margin: 0 auto;
   border-radius: 5px;
 }
 </style>

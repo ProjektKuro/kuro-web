@@ -57,6 +57,6 @@
   },
   "Markets": {
     "Supermarkets": "Supermärkte",
-    "Distance": "{distance} Meter"
+    "Distance": "{distance} km"
   }
 }
