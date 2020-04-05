@@ -1,10 +1,9 @@
 <template>
   <div class="markets">
-    <p>Hier entsteht die Supermarktseite.</p>
+    <p>{{$t('Markets.IntroText')}}</p>
 
     <div v-if="errorStr">
-      Sorry, but the following error
-      occurred: {{errorStr}}
+      {{$t('Markets.SorryError')}}: {{$t(errorStr)}}
     </div>
 
     <div v-if="gettingLocation">
