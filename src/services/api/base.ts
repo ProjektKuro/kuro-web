@@ -1,21 +1,21 @@
 import Vue from "vue";
-import axios from "axios";
-import VueAxios from "vue-axios";
-
-const baseUrl = process.env.VUE_APP_API_BASE_URL;
+import axios, { AxiosInstance, AxiosResponse } from "axios";
 
 export class BaseApiService {
-  private static _instance: BaseApiService;
-  private constructor() {
-    Vue.use(VueAxios, axios);
-    Vue.axios.defaults.baseURL = baseUrl;
-    Vue.axios.defaults.headers = {
+  private baseUrl = process.env.VUE_APP_API_BASE_URL;
+  static _instance: BaseApiService;
+  http: AxiosInstance;
+  constructor() {
+    this.http = axios.create({
+      baseURL: this.baseUrl,
+    });
+    this.http.defaults.headers.common = {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "POST, GET, PUT, OPTIONS, DELETE",
       "Access-Control-Allow-Headers":
         "Access-Control-Allow-Methods, Access-Control-Allow-Origin, Origin, Accept, Content-Type",
       "Content-Type": "application/json",
-      Accept: "application/json"
+      Accept: "application/json",
     };
   }
   static get instance() {
@@ -25,19 +25,19 @@ export class BaseApiService {
     return this._instance;
   }
 
-  get = async (resource: string = ""): Promise<void> =>{
-    return await Vue.axios.get(resource);
+  read = async (resource: string = ""): Promise<AxiosResponse> => {
+    return await this.http.get(resource);
   };
 
-  post = async <T>(resource: string = "", data: {}): Promise<void> => {
-    return await Vue.axios.post(resource, data);
+  update = async (resource: string, params: {}): Promise<AxiosResponse> => {
+    return await this.http.put(resource, params);
   };
 
-  update = async (resource:string, params: {}): Promise<void> => {
-    return await Vue.axios.put(resource, params);
+  create = async (resource: string = "", data: {}): Promise<AxiosResponse> => {
+    return await this.http.post(resource, data);
   };
 
-  delete = async (resource): Promise<void> => {
-    return await Vue.axios.delete(resource);
-  }
+  delete = async (resource: string): Promise<AxiosResponse> => {
+    return await this.http.delete(resource);
+  };
 }

@@ -1,8 +1,8 @@
 import { BaseApiService } from "./base";
 export class ProductService {
 
-    static getAllProducts = async () => {
-        return await BaseApiService.instance.
-    }
+    static getAllProducts = async (): Promise<void> => {
+        return await BaseApiService.instance.get("/products");
+    };
 
 }
