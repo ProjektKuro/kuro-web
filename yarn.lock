@@ -8758,6 +8758,11 @@ vue@^2.5.16, vue@^2.6.11:
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
   integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
 
+vuex-simple@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/vuex-simple/-/vuex-simple-2.2.0.tgz#8c0ad521942462c370848172269cd5ac72880fc3"
+  integrity sha512-4CI1merNNNZnmiK754dGFTgqjY/ToQ4tzIIG2I9f2CaueEr4aFfrbWOn7Dx2vOwr8OtEnyU3zscbE0yg2RrZjA==
+
 vuex@^3.1.2:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.1.3.tgz#f2ad73e3fb73691698b38c93f66e58e267947180"

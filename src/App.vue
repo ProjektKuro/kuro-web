@@ -10,11 +10,16 @@
 
 <script>
 import Header from "@/components/Header";
+// import { ProductService } from "@/services/api/productService/";
+// import Store from "./store/index";
 
 export default {
   name: "App",
   components: {
     Header
+  },
+  mounted() {
+    this.$store.commit("products/fetchAllProducts");
   }
 };
 </script>
