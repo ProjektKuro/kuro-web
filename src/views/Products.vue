@@ -1,8 +1,6 @@
 <template>
   <div class="products">
-    <p>
-      {{ $t('Products.ProductsIntroText') }}
-    </p>
+    <p>{{ $t('Products.ProductsIntroText') }}</p>
     <br />
     <div class="productFilter">
       <div class="filter-container">
@@ -12,7 +10,10 @@
             v-model="searchQuery"
             placeholder="Suchbegriff eingeben..."
           />
-          <button class="set-filter-btn" @click="setSearchQuery(searchQuery)">{{ $t('Products.SearchButtonLabel') }}</button>
+          <button
+            class="set-filter-btn"
+            @click="setSearchQuery(searchQuery)"
+          >{{ $t('Products.SearchButtonLabel') }}</button>
         </div>
       </div>
       <div>
@@ -23,13 +24,13 @@
 
     <div id="products">
       <div
-        v-for="(product, i) in products"
+        v-for="(product, i) in cProducts"
         :key="`Lang${i}`"
-        :class="{ active: productIdSelected === product.name }"
-        @click="selectProduct(product.name)"
+        :class="{ active: productNameSelected === product.name }"
+        @click="selectProductByName(product)"
         class="product"
       >
-        <ProductDetails :product="product" v-if="productIdSelected === product.name" />
+        <ProductDetails :product="product" v-if="productNameSelected === product.name" />
         <Product :product="product" v-else />
       </div>
     </div>
@@ -40,6 +41,7 @@
 <script>
 import Product from "@/components/product/Product";
 import ProductDetails from "@/components/product/ProductDetails";
+import { mapGetters } from "vuex";
 
 export default {
   name: "Products",
@@ -49,34 +51,37 @@ export default {
   },
   data: () => {
     return {
-      searchQuery: "",
-      products: [],
-      productIdSelected: ""
+      searchQuery: ""
     };
   },
-  created() {
-    // GET request
-    this.$http
-      .get("https://kuro.tlahmann.com/api/products", {
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "POST, GET, PUT, OPTIONS, DELETE",
-          "Access-Control-Allow-Headers":
-            "Access-Control-Allow-Methods, Access-Control-Allow-Origin, Origin, Accept, Content-Type",
-          "Content-Type": "application/json",
-          Accept: "application/json"
-        }
-      })
-      .then(
-        success => {
-          // get body data
-          this.products = success.body.products;
-        },
-        failure => {
-          // error callback
-          console.log(failure);
-        }
-      );
+  mounted() {
+    this.$store.commit("products/fetchAllProducts");
+  },
+  computed: {
+    ...mapGetters({
+      productById: "productIdSelected",
+      productByName: "productNameSelected"
+    }),
+    cProducts() {
+      console.log(this.$store.getters);
+      return this.$store.getters.allProducts;
+    },
+    productIdSelected: {
+      get() {
+        return this.$store.getters.productById;
+      },
+      set(productId) {
+        this.productIdSelected = productId;
+      }
+    },
+    productNameSelected: {
+      get() {
+        return this.$store.getters.productByName;
+      },
+      set(productName) {
+        this.productNameSelected = productName;
+      }
+    }
   },
   methods: {
     setSearchQuery(query) {
@@ -85,11 +90,14 @@ export default {
     getSearchQuery() {
       return this.data.searchQuery;
     },
-    selectProduct(name) {
-      if (this.productIdSelected === name) {
-        this.productIdSelected = "";
+    selectProductByName(product) {
+      if (this.productNameSelected === product.name) {
+        this.$store.dispatch("setSelectedProductName", "");
+        this.$store.dispatch("setSelectedProductId", "");
       } else {
-        this.productIdSelected = name;
+        console.log("Product: ", product.name)
+        this.$store.dispatch("setSelectedProductName", product.name);
+        this.$store.dispatch("setSelectedProductId", product.productId);
       }
     }
   }

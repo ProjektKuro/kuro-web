@@ -2,9 +2,11 @@ import Vue from "vue";
 import axios, { AxiosInstance, AxiosResponse } from "axios";
 
 export class BaseApiService {
+
   private baseUrl = process.env.VUE_APP_API_BASE_URL;
   static _instance: BaseApiService;
   http: AxiosInstance;
+  
   constructor() {
     this.http = axios.create({
       baseURL: this.baseUrl,
