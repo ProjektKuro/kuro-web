@@ -20,7 +20,7 @@
 export default {
   name: "LocaleChanger",
   data() {
-    return { langs: ["de", "en", "da"] };
+    return { langs: ["de", "en", "da", "fr"] };
   },
   methods: {
     getIcon(locale) {
@@ -29,6 +29,8 @@ export default {
           return require("../assets/lang_germany.svg");
         case "da":
           return require("../assets/lang_denmark.svg");
+        case "fr":
+          return require("../assets/lang_french.svg");
         default:
           return require("../assets/lang_united-kingdom.svg");
       }
