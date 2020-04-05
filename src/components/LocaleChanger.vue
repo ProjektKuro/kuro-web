@@ -29,6 +29,8 @@ export default {
           return require("../assets/lang_germany.svg");
         case "da":
           return require("../assets/lang_denmark.svg");
+        case "tr":
+          return require("../assets/lang_turkish.svg");
         default:
           return require("../assets/lang_united-kingdom.svg");
       }
