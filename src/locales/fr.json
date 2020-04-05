@@ -57,7 +57,6 @@
   },
   "Markets": {
     "IntroText": "Les supermarchés peuvent être recherchés ici.",
-    "GeolocationDeny": "Désolé, l'utilisateur a refusé de partager sa position",
     "Supermarkets": "Supermarchés",
     "Distance": "{distance} mètres",
     "SorryError": "Désolé, une erreur s'est produite"

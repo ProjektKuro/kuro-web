@@ -57,7 +57,6 @@
   },
   "Markets": {
     "IntroText": "Hier entsteht die Supermarktseite.",
-    "GeolocationDeny": "Sorry, but the following error occurred: User denied Geolocation",
     "Supermarkets": "Supermärkte",
     "Distance": "{distance} Meter",
     "SorryError": "Sorry, but the following error occurred"
