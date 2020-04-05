@@ -20,7 +20,7 @@
 export default {
   name: "LocaleChanger",
   data() {
-    return { langs: ["de", "en", "da"] };
+    return { langs: ["de", "en", "da", "tr"] };
   },
   methods: {
     getIcon(locale) {
