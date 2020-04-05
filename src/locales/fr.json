@@ -1,0 +1,66 @@
+{
+  "Language": {
+    "ChangeLanguage": "Changer le language",
+    "da": "Danois",
+    "de": "Allemand",
+    "en": "Anglais"
+  },
+  "Info": {
+    "Info": "Informations",
+    "AboutKuro": "À propose de Kuro",
+    "AboutKuroDescription": "Avec Kuro, vous pouvez vérifier l'état des produits de vos supermarchés locaux et voir la disponibilité des produits avant de partir pour faire du shopping.",
+    "MotivationHeading": "L'histoire de Kuro",
+    "MotivationDescription": "Kuro est né comme une idée de solution de \"surveillance de l'état des supermarchés \" au sein du \"hackathon WirVsVirus \". L'application a été planifiée et la structure de base complètement mise en œuvre. Après le Hackthon, l'équipe de développement a décidé de continuer à développer Kuro.",
+    "Created": {
+      "First": "Cette page a été créée lors du",
+      "Link": "#WirVsVirus Hackathon."
+    },
+    "CurrentState": "Statut actuel de Kuro",
+    "CurrentStateDescription": {
+      "Dev": "Il s'agit de la dernière version de Kuro, mais jusqu'à présent sans fonctionnalité sur les pages Produits et Supermarchés. Un prototype fonctionnel de Kuro-web devrait apparaître dans les prochains temps. Une version Android de kuro sera bientôt disponible en téléchargement sur le Google Play Store.",
+      "SolutionEnabler": "Kuro était inscrit au programme Solution Enabler du hackathon WirVsVirus."
+    },
+    "NextSteps": "Prochaines étapes pour Kuro",
+    "NextStepsDescription": "Voici une liste de choses qui sont prévues pour Kuro.",
+    "NextStepsDevDescription": {
+      "General": "Sortie d'une version bêta pour Android, le client web suivra.",
+      "GeneralHeading": "Général",
+      "Web": "Automatisation du déploiement",
+      "WebHeading": "Client Web"
+    },
+    "WirVsVirusLogo": "Logo du #WirVsVirusHack"},
+  "Products": {
+    "ProductsIntroText": "Les produits Kuro peuvent être recherchés ici. Entrez simplement le nom du produit que vous recherchez dans le champ de recherche.",
+    "SearchButtonLabel": "Recherche",
+    "SearchButtonPlaceholderText": "Entrez les termes de recherche",
+    "SearchFilterLabel": "Filtre produit",
+    "Products": "Produits",
+    "Brot": "Pain",
+    "Damenhygiene": "Hygiène féminine",
+    "Desinfektionsmittel": "Désinfectant",
+    "Eier": "Oeufs",
+    "Fertiggerichte": "Plats cuisinés",
+    "Gemüsekonserven": "Légumes en conserve",
+    "Hefe": "Levure",
+    "Kartoffeln": "Pommes de terre",
+    "Klopapier": "Papier toilette",
+    "Mehl": "Farine",
+    "Milch": "Lait",
+    "Nudeln": "Nouilles",
+    "Öl": "Huile",
+    "Reis": "Riz",
+    "Säuglingsnahrung": "Aliments pour bébé",
+    "Seife": "Savon",
+    "Tomatenkonserven": "Tomates en conserve",
+    "Waschmittel": "Détergent",
+    "Windeln": "Couches"
+  },
+  "Markets": {
+    "IntroText": "Les supermarchés peuvent être recherchés ici.",
+    "GeolocationDeny": "Désolé, l'utilisateur a refusé de partager sa position",
+    "Supermarkets": "Supermarchés",
+    "Distance": "{distance} mètres",
+    "SorryError": "Désolé, une erreur s'est produite"
+  },
+  "User denied Geolocation": "l'utilisateur a refusé le partage de position"
+}
