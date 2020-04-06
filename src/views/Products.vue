@@ -29,8 +29,7 @@
         @click="selectProduct(product.name)"
         class="product"
       >
-        <ProductDetails :product="product" v-if="productIdSelected === product.name" />
-        <Product :product="product" v-else />
+        <ProductDetails :product="product" />
       </div>
     </div>
     <p></p>
@@ -38,13 +37,11 @@
 </template>
 
 <script>
-import Product from "@/components/product/Product";
 import ProductDetails from "@/components/product/ProductDetails";
 
 export default {
   name: "Products",
   components: {
-    Product,
     ProductDetails
   },
   data: () => {
@@ -99,15 +96,17 @@ export default {
 <style scoped>
 #products {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  margin-left: -8px; /* Adjustment for the gutter */
+  width: 100%;
 }
 .product {
-  width: calc(100% / 4);
+  flex: auto;
+  height: 200px;
+  min-width: calc(100% / 4);
+  max-width: calc(100% / 2);
   transition: all 0.35s ease-in-out;
   cursor: pointer;
-}
-.product.active {
-  width: 100%;
 }
 .filter-container {
   height: 1.3rem;
