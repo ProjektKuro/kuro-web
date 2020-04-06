@@ -4,16 +4,12 @@
       <div class="logo-image-container" @click="hoothoot()">
         <img alt="Kuro logo" class="kuro-logo" src="../assets/logo.svg" />
       </div>
-      <!--
-        <span class="kuro-header-name">kuro.</span>
-      -->
     </div>
     <LocaleChanger />
     <div class="navbar-elements">
-      <!-- <router-link class="navbar-link" to="/"> Start </router-link> -->
       <router-link class="navbar-link" to="/about">{{ $t('Info.Info') }}</router-link>
       <router-link class="navbar-link" to="/products">{{ $t('Products.Products') }}</router-link>
-      <router-link class="navbar-link" to="/markets">{{ $t('Supermarkets') }}</router-link>
+      <router-link class="navbar-link" to="/markets">{{ $t('Markets.Supermarkets') }}</router-link>
     </div>
   </div>
 </template>
@@ -37,6 +33,7 @@ export default {
 
 <style scoped>
 #nav {
+  background-color: #0f576d;
   padding: 20px;
   vertical-align: center;
   position: relative;

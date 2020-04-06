@@ -8,9 +8,20 @@
   "Info": {
     "Info": "Informationer",
     "AboutKuro": "Om Kuro",
-    "AboutKuroDescription": "Kuro er en applikation til alle. Med Kuro kan du åbne produktstatus for de næste supermarkeder og kontrollere produkttilgængeligheden, før du tager af sted."
+    "AboutKuroDescription": "Kuro er en applikation til alle. Med Kuro kan du åbne produktstatus for de næste supermarkeder og kontrollere produkttilgængeligheden, før du tager af sted.",
+    "MotivationHeading": "Kuros baggrund",
+    "MotivationDescription": "Kuro blev født som en idé til en løsning til statuscheck for supermarkeder som en del af \"WirVsVirus hackathon\". Ansøgningen var planlagt og grundstrukturen fuldstændigt implementeret. Efter Hackthon besluttede udviklingsholdet at fortsætte udviklingen af kuro.",
+    "Created": {
+      "First": "Denne side blev oprettet inden for",
+      "Link": "#WirVsVirus hackathon."
+    },
+    "WirVsVirusLogo": "#WirVsVirusHack Logo"
   },
   "Products": {
+    "ProductsIntroText": "Produkterne fra Kuro kan du søges her. Indtast blot navnet på det produkt, du leder efter, i søgefeltet.",
+    "SearchButtonLabel": "Lede",
+    "SearchButtonPlaceholderText": "Indtast søgeudtryk",
+    "SearchFilterLabel": "Produktfilter",
     "Products": "Produkte",
     "Brot": "Brød",
     "Damenhygiene": "Feminin hygiejne",

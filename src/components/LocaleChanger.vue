@@ -20,17 +20,19 @@
 export default {
   name: "LocaleChanger",
   data() {
-    return { langs: ["de", "en", "da"] };
+    return { langs: ["de", "en", "da", "fr"] };
   },
   methods: {
     getIcon(locale) {
       switch (locale) {
         case "de":
-          return "./img/lang_germany.svg";
+          return require("../assets/lang_germany.svg");
         case "da":
-          return "./img/lang_denmark.svg";
+          return require("../assets/lang_denmark.svg");
+        case "fr":
+          return require("../assets/lang_french.svg");
         default:
-          return "./img/lang_united-kingdom.svg";
+          return require("../assets/lang_united-kingdom.svg");
       }
     },
     changeLocale(locale) {

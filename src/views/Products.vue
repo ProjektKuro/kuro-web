@@ -10,13 +10,13 @@
           <input
             class="searchbox-filter"
             v-model="searchQuery"
-            placeholder="Suchbegriff eingeben..."
+            :placeholder="$t('Products.SearchButtonPlaceholderText')+'...'"
           />
           <button class="set-filter-btn" @click="setSearchQuery(searchQuery)">{{ $t('Products.SearchButtonLabel') }}</button>
         </div>
       </div>
       <div>
-        <span class="search-filter">{{ $t('Products.SearchFilterLabel') }}</span>
+        <span class="search-filter">{{ $t('Products.SearchFilterLabel') }} </span>
         <span>{{ searchQuery }}</span>
       </div>
     </div>
@@ -104,6 +104,7 @@ export default {
 .product {
   width: calc(100% / 4);
   transition: all 0.35s ease-in-out;
+  cursor: pointer;
 }
 .product.active {
   width: 100%;
