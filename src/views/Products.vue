@@ -8,7 +8,7 @@
           <input
             class="searchbox-filter"
             v-model="searchQuery"
-            placeholder="Suchbegriff eingeben..."
+            :placeholder="$t('Products.SearchButtonPlaceholderText')+'...'"
           />
           <button
             class="set-filter-btn"
@@ -17,7 +17,7 @@
         </div>
       </div>
       <div>
-        <span class="search-filter">{{ $t('Products.SearchFilterLabel') }}</span>
+        <span class="search-filter">{{ $t('Products.SearchFilterLabel') }} </span>
         <span>{{ searchQuery }}</span>
       </div>
     </div>
