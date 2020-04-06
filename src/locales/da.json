@@ -3,7 +3,8 @@
     "ChangeLanguage": "Skift sprog",
     "da": "Dansk",
     "de": "Tysk",
-    "en": "Englisk"
+    "en": "Englisk",
+    "fr": "Fransk"
   },
   "Info": {
     "Info": "Informationer",
@@ -14,6 +15,19 @@
     "Created": {
       "First": "Denne side blev oprettet inden for",
       "Link": "#WirVsVirus hackathon."
+    },
+    "CurrentState": "Kuros nuværende status",
+    "CurrentStateDescription": {
+      "Dev": "Dette er den seneste version af Kuro, men indtil videre uden funktionalitet på siderne Produkter og Supermarkeder. En fungerende prototype af Kuro-web skal vises inden for næste gang. En Android-version af Kuro vil snart være tilgængelig til download fra Google Play Store.",
+      "SolutionEnabler": "Kuro blev indiskrive i Solution Enabler-programmet i WirVsVirus-hackathon."
+    },
+    "NextSteps": "Næste trinnet til Kuro",
+    "NextStepsDescription": "Her er en liste over ting, der stadig planlagt til Kuro.",
+    "NextStepsDevDescription": {
+      "General": "Release einer Beta Version für Android, Web-Client folgt.",
+      "GeneralHeading": "Almindelig",
+      "Web": "Automation af Deployments",
+      "WebHeading": "Web-Client"
     },
     "WirVsVirusLogo": "#WirVsVirusHack Logo"
   },
@@ -43,5 +57,11 @@
     "Waschmittel": "Vaskemiddel",
     "Windeln": "Bleer"
   },
-  "Supermarkets": "Supermarkeder"
+  "Markets": {
+    "IntroText": "Supermarkedsiden oprettes her.",
+    "Supermarkets": "Supermarkeder",
+    "Distance": "{distance} meter",
+    "SorryError": "Beklager, følgende fejl er opstået"
+  },
+  "User denied Geolocation": "Brugeren har nægtet at gå ind i positionen"
 }
