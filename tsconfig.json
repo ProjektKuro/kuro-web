@@ -16,6 +16,9 @@
       "webpack",
       "webpack-env"
     ],
+    "typeRoots": [
+      "src/types",
+    ],
     "paths": {
       "@/*": [
         "src/*"
