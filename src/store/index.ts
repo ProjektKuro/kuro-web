@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import { createVuexStore, Module, Getter, Action } from "vuex-simple";
 import { ProductStore } from './productStore';
+import { IProduct } from '@/interfaces';
 Vue.use(Vuex)
 
 class Store {
@@ -15,24 +16,32 @@ class Store {
   }
   
   @Getter()
+  public get selectedProduct() {
+    return this.products.selectedProduct;
+  }
+
+  @Getter()
   public get productById() {
-    return this.products._selectedProductId;
+    return this.products.selectedProductId;
   }
 
   @Getter()
   public get productByName() {
-    return this.products._selectedProductName;
+    return this.products.selectedProductName;
+  }
+
+  @Action()
+  setSelectedProduct(product?: IProduct) {
+    this.products.setSelectedProduct(product ?? this.products.selectedProduct);
   }
 
   @Action()
   setSelectedProductId(productId: string) {
-    console.log("[MAIN STORE]: Passing to product store: ", productId);
     this.products.setSelectedProductId(productId);
   }
 
   @Action()
   setSelectedProductName(productName: string) {
-    console.log("[MAIN STORE]: Passing to product store: ", productName);
     this.products.setSelectedProductName(productName);
   }
 }

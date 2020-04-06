@@ -10,6 +10,8 @@ export class ProductStore {
   @State()
   public _products: TProducts;
   @State()
+  public _selectedProduct: IProduct;
+  @State()
   public _selectedProductId: string;
   @State()
   public _selectedProductName: string;
@@ -18,6 +20,12 @@ export class ProductStore {
 
   constructor() {
     this._products = [];
+    this._selectedProduct = {
+      categories: [],
+      description: "",
+      name: "",
+      productId: ""
+    };
     this._selectedProductId = "";
     this._selectedProductName = "";
     this.productsLoadingErr = "";
@@ -26,6 +34,11 @@ export class ProductStore {
   @Getter()
   get allProducts(): TProducts {
     return this._products;
+  }
+  
+  @Getter()
+  get selectedProduct(): IProduct {
+    return this._selectedProduct;
   }
   
   @Getter()
@@ -61,16 +74,17 @@ export class ProductStore {
 
   @Action()
   setSelectedProductId(productId: string) {
-    console.log("[PRODUCT STORE]: Setting to id: ", productId);
     this._selectedProductId = productId;
-    console.log("[PRODUCT STORE]: ", this._selectedProductId);
+  }
+
+  @Action()
+  setSelectedProduct(product?: IProduct) {
+    this._selectedProduct = product ?? this._selectedProduct;
   }
 
   @Action()
   setSelectedProductName(productName: string) {
-    console.log("[PRODUCT STORE]: Setting to name: ", productName);
     this._selectedProductName = productName;
-    console.log("[PRODUCT STORE]: ", this._selectedProductName);
   }
 
  
