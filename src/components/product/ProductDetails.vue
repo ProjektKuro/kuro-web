@@ -12,7 +12,7 @@
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562379.503662814!2d8.212121040116859!3d51.15782082257106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479a721ec2b1be6b%3A0x75e85d6b8e91e55b!2sDeutschland!5e0!3m2!1sde!2sde!4v1585514430355!5m2!1sde!2sde"
         width="100%"
-        height="450"
+        height="400"
         frameborder="0"
         style="border:0;"
         allowfullscreen
@@ -45,7 +45,10 @@ export default {
   background-color: #c6e2e6;
   border: 1px solid #c6e2e6;
   border-radius: 5px;
+  max-width: 100%;
+
 }
+
 .product-details .title {
   display: flex;
   flex-direction: row;

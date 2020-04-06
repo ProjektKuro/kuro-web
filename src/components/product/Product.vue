@@ -1,17 +1,37 @@
 <template>
   <div class="details" v:bind="prop-product">
-    <img class="product-image" src="@/assets/logo.svg" alt="product-logo" />
-    <span class="product-name">{{ $t(`Products.${product.name}`) }}</span>
+    <img alt="product-logo" class="product-image" :hidden="isSelected()" src="@/assets/logo.svg" />
+    <span class="product-name" :hidden="isSelected()">{{ $t(`Products.${product.name}`) }}</span>
+    <ProductDetails :product="product" v-if="isSelected()" />
   </div>
 </template>
 
 <script>
+import ProductDetails from "@/components/product/ProductDetails";
+
 export default {
   product: {},
+  components: {
+    ProductDetails
+  },
+  computed: {
+    productNameSelected: {
+      get() {
+        return this.$store.getters.productByName;
+      },
+      set(productName) {
+        this.productNameSelected = productName;
+      }
+    }
+  },
   props: {
     product: Object
   },
-  methods: {}
+  methods: {
+    isSelected() {
+      return this.productNameSelected === this.product.name;
+    }
+  }
 };
 </script>
 

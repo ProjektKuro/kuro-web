@@ -27,11 +27,11 @@
         v-for="(product, i) in cProducts"
         :key="`Lang${i}`"
         :class="{ active: productNameSelected === product.name }"
-        @click="selectProductByName(product)"
+        @click="selectProduct(product)"
         class="product"
       >
-        <ProductDetails :product="product" v-if="productNameSelected === product.name" />
-        <Product :product="product" v-else />
+        
+        <Product :product="product"  />
       </div>
     </div>
     <p></p>
@@ -40,14 +40,12 @@
 
 <script>
 import Product from "@/components/product/Product";
-import ProductDetails from "@/components/product/ProductDetails";
 import { mapGetters } from "vuex";
 
 export default {
   name: "Products",
   components: {
     Product,
-    ProductDetails
   },
   data: () => {
     return {
@@ -90,7 +88,7 @@ export default {
     getSearchQuery() {
       return this.data.searchQuery;
     },
-    selectProductByName(product) {
+    selectProduct(product) {
       if (this.productNameSelected === product.name) {
         this.$store.dispatch("setSelectedProductName", "");
         this.$store.dispatch("setSelectedProductId", "");
@@ -110,12 +108,12 @@ export default {
   flex-wrap: wrap;
 }
 .product {
-  width: calc(100% / 4);
+  width: calc(100% / 3);
   transition: all 0.35s ease-in-out;
   cursor: pointer;
 }
 .product.active {
-  width: 100%;
+  width: 50%;
 }
 .filter-container {
   height: 1.3rem;
