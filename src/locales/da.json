@@ -24,7 +24,7 @@
     "NextSteps": "Næste trinnet til Kuro",
     "NextStepsDescription": "Her er en liste over ting, der stadig planlagt til Kuro.",
     "NextStepsDevDescription": {
-      "General": "Release einer Beta Version für Android, Web-Client folgt.",
+      "General": "Frigivelse af en beta-version til Android, webklient følger.",
       "GeneralHeading": "Almindelig",
       "Web": "Automation af Deployments",
       "WebHeading": "Web-Client"
