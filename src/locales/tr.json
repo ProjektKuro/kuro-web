@@ -13,8 +13,8 @@
     "MotivationHeading": "Kuronun nedeni",
     "MotivationDescription": "Kuro ile öne sürülen temel fikir süpermarketlerin stock izlenmesini saglamaktir",
     "Created": {
-      "First": "Bu anasayfa {first} olusmustur",
-      "Link": "#WirVsVirus Hackathons."
+      "First": "",
+      "Link": "Bu anasayfa #WirVsVirus Hackathon'da olusmustur"
     },
     "CurrentState": "Kuronun mevcut durumu",
     "CurrentStateDescription": {
@@ -26,7 +26,7 @@
     "NextStepsDevDescription": {
       "General": "Android için beta sürümü yayınlandı, web istemcisi şöyle.",
       "GeneralHeading": "Genellikle",
-      "Web": "Deployments otomasyon",
+      "Web": "Otomatik yayın",
       "WebHeading": "Web-Client"
     },
     "WirVsVirusLogo": "#WirVsVirusHack logo"},
