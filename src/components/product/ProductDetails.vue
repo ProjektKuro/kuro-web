@@ -1,5 +1,5 @@
 <template>
-  <div class="product-details" v:bind="prop-product">
+  <div  v:bind="prop-product">
     <div class="title">
       <img class="product-image" src="@/assets/logo.svg" alt="product-logo" />
       <h3 class="product-name">{{ $t(`Products.${product.name}`) }}</h3>
@@ -26,29 +26,21 @@ export default {
 </script>
 
 <style scoped>
-.product-details {
-  text-align: left;
-  margin: 10px;
-  padding: 10px 30px;
-  background-color: #c6e2e6;
-  border: 1px solid #c6e2e6;
-  border-radius: 5px;
-  max-width: 100%;
 
-}
-
-.product-details .title {
+.title {
   display: flex;
   flex-direction: row;
 }
-.product-details .product-image {
+.product-image {
   margin: 0;
   max-width: 6rem;
 }
-/* .details .product-name {
-  margin: 0.1rem auto;
-  max-width: 4rem;
-} */
+.product-name {
+  text-align: left;
+  margin-left: 0.5rem;
+  /* max-width: 4rem; */
+  hyphens: auto;
+} 
 /* .product {
   display: flex;
   flex-direction: column;

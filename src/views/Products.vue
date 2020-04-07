@@ -17,7 +17,7 @@
         </div>
       </div>
       <div>
-        <span class="search-filter">{{ $t('Products.SearchFilterLabel') }} </span>
+        <span class="search-filter">{{ $t('Products.SearchFilterLabel') }}</span>
         <span>{{ searchQuery }}</span>
       </div>
     </div>
@@ -26,12 +26,10 @@
       <div
         v-for="(product, i) in cProducts"
         :key="`Lang${i}`"
-        :class="{ active: productNameSelected === product.name }"
         @click="selectProduct(product)"
         class="product"
       >
-        
-        <Product :product="product"  />
+        <Product :product="product" />
       </div>
     </div>
     <p></p>
@@ -45,7 +43,7 @@ import { mapGetters } from "vuex";
 export default {
   name: "Products",
   components: {
-    Product,
+    Product
   },
   data: () => {
     return {
@@ -93,7 +91,7 @@ export default {
         this.$store.dispatch("setSelectedProductName", "");
         this.$store.dispatch("setSelectedProductId", "");
       } else {
-        console.log("Product: ", product.name)
+        console.log("Product: ", product.name);
         this.$store.dispatch("setSelectedProductName", product.name);
         this.$store.dispatch("setSelectedProductId", product.productId);
       }
@@ -107,13 +105,26 @@ export default {
   display: flex;
   flex-wrap: wrap;
 }
-.product {
-  width: calc(100% / 3);
-  transition: all 0.35s ease-in-out;
-  cursor: pointer;
+@media screen and (min-width: 1024px) {
+  .product {
+    width: calc(100% / 4);
+    transition: all 0.35s ease-in-out;
+    cursor: pointer;
+  }
 }
-.product.active {
-  width: 50%;
+@media screen and (min-width: 350px) and (max-width: 768px) {
+  .product {
+    width: calc(100% / 2);
+    transition: all 0.35s ease-in-out;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 400px) {
+  .product {
+    width: calc(100%);
+    transition: all 0.35s ease-in-out;
+    cursor: pointer;
+  }
 }
 .filter-container {
   height: 1.3rem;

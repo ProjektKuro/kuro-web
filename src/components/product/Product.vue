@@ -1,8 +1,7 @@
 <template>
   <div class="details" v:bind="prop-product">
-    <img alt="product-logo" class="product-image" :hidden="isSelected()" src="@/assets/logo.svg" />
-    <span class="product-name" :hidden="isSelected()">{{ $t(`Products.${product.name}`) }}</span>
-    <ProductDetails :product="product" v-if="isSelected()" />
+    
+    <ProductDetails :product="product" />
   </div>
 </template>
 
@@ -39,7 +38,7 @@ export default {
 .details {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
   margin: 10px;
   padding: 10px;
   background-color: #c6e2e6;
