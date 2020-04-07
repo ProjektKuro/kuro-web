@@ -33,6 +33,7 @@ export default {
 
 <style scoped>
 #nav {
+  background-color: #0f576d;
   padding: 20px;
   vertical-align: center;
   position: relative;

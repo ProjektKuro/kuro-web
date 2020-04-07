@@ -56,7 +56,9 @@
     "Windeln": "Windeln"
   },
   "Markets": {
+    "IntroText": "Hier entsteht die Supermarktseite.",
     "Supermarkets": "Supermärkte",
-    "Distance": "{distance} Meter"
+    "Distance": "{distance} Meter",
+    "SorryError": "Sorry, but the following error occurred"
   }
 }
