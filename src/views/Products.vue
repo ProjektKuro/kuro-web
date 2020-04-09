@@ -108,22 +108,21 @@ export default {
 @media screen and (min-width: 1024px) {
   .product {
     width: calc(100% / 4);
-    transition: all 0.35s ease-in-out;
-    cursor: pointer;
   }
 }
-@media screen and (min-width: 350px) and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  .product {
+    width: calc(100% / 3);
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 768px) {
   .product {
     width: calc(100% / 2);
-    transition: all 0.35s ease-in-out;
-    cursor: pointer;
   }
 }
 @media screen and (max-width: 400px) {
   .product {
     width: calc(100%);
-    transition: all 0.35s ease-in-out;
-    cursor: pointer;
   }
 }
 .filter-container {
@@ -137,6 +136,12 @@ export default {
 .filter-container-content {
   margin-bottom: 0.25rem;
   vertical-align: center;
+}
+.product {
+  min-height: 200px;
+  margin: 1rem auto;
+  transition: all 0.35s ease-in-out;
+  cursor: pointer;
 }
 .products p,
 span {
