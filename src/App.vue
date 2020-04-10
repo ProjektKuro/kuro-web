@@ -26,7 +26,7 @@ export default {
 
 <style>
 body {
-  background-color: #0f576d;
+  background-color: #eaeaea;
   text-align: left;
   margin: 0;
 }
@@ -36,20 +36,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color:#fff;
-}
-
-@media screen and (min-width: 544px)  {
-  .content {
-    margin: 1rem 30%;
-  }
+  color: #0f576d;
 }
 
 .content {
   margin: 1rem 1.25rem;
 }
-.content p, span, li {
-  color: #fff;
+@media screen and (min-width: 544px)  {
+  .content {
+    margin: 1rem auto;
+    max-width: 1240px;
+  }
 }
 
 
