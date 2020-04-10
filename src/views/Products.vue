@@ -138,7 +138,7 @@ export default {
   vertical-align: center;
 }
 .product {
-  min-height: 200px;
+  min-height: 300px;
   margin: 1rem auto;
   transition: all 0.35s ease-in-out;
   cursor: pointer;

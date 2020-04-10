@@ -26,29 +26,42 @@ export default {
 </script>
 
 <style scoped>
-
-.title {
-  display: flex;
-  /* min-width: auto; */
-  margin: 0.5rem;
-  hyphens: auto;
-  flex-direction: row;
+@media screen and (min-width: 769px) {
+  .title {
+    display: flex;
+    /* min-width: auto; */
+    margin: 0.5rem 0.5rem;
+    hyphens: auto;
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 768px) {
+  .title {
+    display: flex;
+    /* min-width: auto; */
+    margin: 0.5rem 0.5rem;
+    hyphens: auto;
+    flex-direction: column;
+  }
+}
+.details {
+  padding: 1rem;
 }
 .product-card {
   margin: 0.5rem;
   padding: 0.5rem;
-  min-height: 200px;
+  height: inherit;
   justify-content: center;
 }
 .product-image {
-  margin: 0;
-  max-width: 6rem;
+  margin: 0 1rem;
+  max-width: 4rem;
 }
 .product-name {
   text-align: left;
-  margin-left: 0.5rem;
+  margin-left: 0 0.5rem;
   /* max-width: 4rem; */
-} 
+}
 /* .product {
   display: flex;
   flex-direction: column;

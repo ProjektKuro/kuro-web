@@ -36,7 +36,7 @@ export default {
 
 <style scoped>
 .details {
-  height: inherit;
+  min-height: inherit;
   display: flex;
   flex-direction: column;
   text-align: left;
