@@ -1,5 +1,5 @@
 <template>
-  <div class="product-details" v:bind="prop-product">
+  <div class="product-card" v:bind="prop-product">
     <div class="title">
       <img class="product-image" src="@/assets/logo.svg" alt="product-logo" />
       <h3 class="product-name">{{ $t(`Products.${product.name}`) }}</h3>
@@ -7,18 +7,6 @@
     <div class="details">
       <p>{{product.description}}</p>
       <span>{{categoryString()}}</span>
-    </div>
-    <div class="map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562379.503662814!2d8.212121040116859!3d51.15782082257106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479a721ec2b1be6b%3A0x75e85d6b8e91e55b!2sDeutschland!5e0!3m2!1sde!2sde!4v1585514430355!5m2!1sde!2sde"
-        width="100%"
-        height="450"
-        frameborder="0"
-        style="border:0;"
-        allowfullscreen
-        aria-hidden="false"
-        tabindex="0"
-      ></iframe>
     </div>
   </div>
 </template>
@@ -38,27 +26,42 @@ export default {
 </script>
 
 <style scoped>
-.product-details {
-  text-align: left;
-  margin: 10px;
-  padding: 10px 30px;
-  background-color: #c6e2e6;
-  border-radius: 5px;
-  border: 1px solid lightgray;
-  box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.2);
+@media screen and (min-width: 769px) {
+  .title {
+    display: flex;
+    /* min-width: auto; */
+    margin: 0.5rem 0.5rem;
+    hyphens: auto;
+    flex-direction: row;
+  }
 }
-.product-details .title {
-  display: flex;
-  flex-direction: row;
+@media screen and (max-width: 768px) {
+  .title {
+    display: flex;
+    /* min-width: auto; */
+    margin: 0.5rem 0.5rem;
+    hyphens: auto;
+    flex-direction: column;
+  }
 }
-.product-details .product-image {
-  margin: 0;
-  max-width: 6rem;
+.details {
+  padding: 1rem;
 }
-/* .details .product-name {
-  margin: 0.1rem auto;
+.product-card {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  height: inherit;
+  justify-content: center;
+}
+.product-image {
+  margin: 0 1rem;
   max-width: 4rem;
-} */
+}
+.product-name {
+  text-align: left;
+  margin-left: 0 0.5rem;
+  /* max-width: 4rem; */
+}
 /* .product {
   display: flex;
   flex-direction: column;

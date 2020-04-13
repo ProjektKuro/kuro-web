@@ -1,25 +1,45 @@
 <template>
   <div class="details" v:bind="prop-product">
-    <img class="product-image" src="@/assets/logo.svg" alt="product-logo" />
-    <span class="product-name">{{ $t(`Products.${product.name}`) }}</span>
+    
+    <ProductDetails :product="product" />
   </div>
 </template>
 
 <script>
+import ProductDetails from "@/components/product/ProductDetails";
+
 export default {
   product: {},
+  components: {
+    ProductDetails
+  },
+  computed: {
+    productNameSelected: {
+      get() {
+        return this.$store.getters.productByName;
+      },
+      set(productName) {
+        this.productNameSelected = productName;
+      }
+    }
+  },
   props: {
     product: Object
   },
-  methods: {}
+  methods: {
+    isSelected() {
+      return this.productNameSelected === this.product.name;
+    }
+  }
 };
 </script>
 
 <style scoped>
 .details {
+  min-height: inherit;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
   margin: 10px;
   padding: 10px;
   background-color: #c6e2e6;
