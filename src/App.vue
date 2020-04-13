@@ -42,12 +42,5 @@ body {
 .content {
   margin: 1rem 1.25rem;
 }
-@media screen and (min-width: 544px)  {
-  .content {
-    margin: 1rem auto;
-    max-width: 1240px;
-  }
-}
-
 
 </style>
