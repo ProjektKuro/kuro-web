@@ -26,23 +26,12 @@ export default {
 </script>
 
 <style scoped>
-.product-details {
-  text-align: left;
-  margin: 10px;
-  padding: 10px 30px;
-  background-color: #c6e2e6;
-  border-radius: 5px;
-  border: 1px solid lightgray;
-  box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.2);
-}
-@media screen and (max-width: 768px) {
-  .title {
-    display: flex;
-    /* min-width: auto; */
-    margin: 0.5rem 0.5rem;
-    hyphens: auto;
-    flex-direction: column;
-  }
+.title {
+  display: flex;
+  /* min-width: auto; */
+  margin: 0.5rem 0.5rem;
+  hyphens: auto;
+  flex-direction: row;
 }
 .details {
   padding: 1rem;
@@ -59,7 +48,7 @@ export default {
 }
 .product-name {
   text-align: left;
-  margin-left: 0 0.5rem;
+  margin: 0 0.5rem;
   /* max-width: 4rem; */
 }
 /* .product {
