@@ -1,7 +1,7 @@
 <template>
   <div class="product-card" v:bind="prop-product">
     <div class="title">
-      <img class="product-image" src="@/assets/logo.svg" alt="product-logo" />
+      <img class="product-image" :src="product.image" alt="product-logo" />
       <h3 class="product-name">{{ $t(`Products.${product.name}`) }}</h3>
     </div>
     <div class="details">
