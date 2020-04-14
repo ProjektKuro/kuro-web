@@ -59,7 +59,6 @@ export default {
       productByName: "productNameSelected"
     }),
     cProducts() {
-      console.log(this.$store.getters);
       return this.$store.getters.allProducts;
     },
     productIdSelected: {
