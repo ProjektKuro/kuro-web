@@ -3,7 +3,8 @@
     "ChangeLanguage": "Change language",
     "da": "Danish",
     "de": "German",
-    "en": "English"
+    "en": "English",
+    "fr": "French"
   },
   "Info": {
     "Info": "Info",
@@ -56,5 +57,11 @@
     "Waschmittel": "Detergent",
     "Windeln": "Diaper"
   },
-  "Supermarkets": "Supermarkets"
+  "Markets": {
+    "IntroText": "The supermarket site will be build here",
+    "Supermarkets": "Supermarkets",
+    "Distance": "{distance} meters",
+    "SorryError": "Sorry, the following error occured"
+  },
+  "User denied Geolocation": "Der Benutzer hat die Positionserfassung verweigert"
 }

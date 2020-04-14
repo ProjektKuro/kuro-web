@@ -7,5 +7,11 @@ module.exports = {
       enableInSFC: false
     }
   },
-  publicPath: ''
+  publicPath: '',
+  pwa: {
+    appleMobileWebAppCapable: true,
+    icons: [{}],
+    name: "kuro-web",
+    shortName: "kuro-web"
+  }
 }

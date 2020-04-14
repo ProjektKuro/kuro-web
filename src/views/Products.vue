@@ -1,8 +1,6 @@
 <template>
   <div class="products">
-    <p>
-      {{ $t('Products.ProductsIntroText') }}
-    </p>
+    <p>{{ $t('Products.ProductsIntroText') }}</p>
     <br />
     <div class="productFilter">
       <div class="filter-container">
@@ -12,25 +10,26 @@
             v-model="searchQuery"
             :placeholder="$t('Products.SearchButtonPlaceholderText')+'...'"
           />
-          <button class="set-filter-btn" @click="setSearchQuery(searchQuery)">{{ $t('Products.SearchButtonLabel') }}</button>
+          <button
+            class="set-filter-btn"
+            @click="setSearchQuery(searchQuery)"
+          >{{ $t('Products.SearchButtonLabel') }}</button>
         </div>
       </div>
       <div>
-        <span class="search-filter">{{ $t('Products.SearchFilterLabel') }} </span>
+        <span class="search-filter">{{ $t('Products.SearchFilterLabel') }}</span>
         <span>{{ searchQuery }}</span>
       </div>
     </div>
 
     <div id="products">
       <div
-        v-for="(product, i) in products"
+        v-for="(product, i) in cProducts"
         :key="`Lang${i}`"
-        :class="{ active: productIdSelected === product.name }"
-        @click="selectProduct(product.name)"
+        @click="selectProduct(product)"
         class="product"
       >
-        <ProductDetails :product="product" v-if="productIdSelected === product.name" />
-        <Product :product="product" v-else />
+        <Product :product="product" />
       </div>
     </div>
     <p></p>
@@ -39,44 +38,45 @@
 
 <script>
 import Product from "@/components/product/Product";
-import ProductDetails from "@/components/product/ProductDetails";
+import { mapGetters } from "vuex";
 
 export default {
   name: "Products",
   components: {
-    Product,
-    ProductDetails
+    Product
   },
   data: () => {
     return {
-      searchQuery: "",
-      products: [],
-      productIdSelected: ""
+      searchQuery: ""
     };
   },
-  created() {
-    // GET request
-    this.$http
-      .get("https://kuro.tlahmann.com/api/products", {
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "POST, GET, PUT, OPTIONS, DELETE",
-          "Access-Control-Allow-Headers":
-            "Access-Control-Allow-Methods, Access-Control-Allow-Origin, Origin, Accept, Content-Type",
-          "Content-Type": "application/json",
-          Accept: "application/json"
-        }
-      })
-      .then(
-        success => {
-          // get body data
-          this.products = success.body.products;
-        },
-        failure => {
-          // error callback
-          console.log(failure);
-        }
-      );
+  mounted() {
+    this.$store.commit("products/fetchAllProducts");
+  },
+  computed: {
+    ...mapGetters({
+      productById: "productIdSelected",
+      productByName: "productNameSelected"
+    }),
+    cProducts() {
+      return this.$store.getters.allProducts;
+    },
+    productIdSelected: {
+      get() {
+        return this.$store.getters.productById;
+      },
+      set(productId) {
+        this.productIdSelected = productId;
+      }
+    },
+    productNameSelected: {
+      get() {
+        return this.$store.getters.productByName;
+      },
+      set(productName) {
+        this.productNameSelected = productName;
+      }
+    }
   },
   methods: {
     setSearchQuery(query) {
@@ -85,11 +85,14 @@ export default {
     getSearchQuery() {
       return this.data.searchQuery;
     },
-    selectProduct(name) {
-      if (this.productIdSelected === name) {
-        this.productIdSelected = "";
+    selectProduct(product) {
+      if (this.productNameSelected === product.name) {
+        this.$store.dispatch("setSelectedProductName", "");
+        this.$store.dispatch("setSelectedProductId", "");
       } else {
-        this.productIdSelected = name;
+        console.log("Product: ", product.name);
+        this.$store.dispatch("setSelectedProductName", product.name);
+        this.$store.dispatch("setSelectedProductId", product.productId);
       }
     }
   }
@@ -101,13 +104,25 @@ export default {
   display: flex;
   flex-wrap: wrap;
 }
-.product {
-  width: calc(100% / 4);
-  transition: all 0.35s ease-in-out;
-  cursor: pointer;
+@media screen and (min-width: 1024px) {
+  .product {
+    width: calc(100% / 4);
+  }
 }
-.product.active {
-  width: 100%;
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  .product {
+    width: calc(100% / 3);
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 768px) {
+  .product {
+    width: calc(100% / 2);
+  }
+}
+@media screen and (max-width: 400px) {
+  .product {
+    width: calc(100%);
+  }
 }
 .filter-container {
   height: 1.3rem;
@@ -120,6 +135,12 @@ export default {
 .filter-container-content {
   margin-bottom: 0.25rem;
   vertical-align: center;
+}
+.product {
+  min-height: 300px;
+  margin: 1rem auto;
+  transition: all 0.35s ease-in-out;
+  cursor: pointer;
 }
 .products p,
 span {
