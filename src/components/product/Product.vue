@@ -45,7 +45,6 @@ export default {
   background-color: #c6e2e6;
   border: 1px solid #c6e2e6;
   border-radius: 5px;
-  border: 1px solid lightgray;
   box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.2);
 }
 .details .product-image {
