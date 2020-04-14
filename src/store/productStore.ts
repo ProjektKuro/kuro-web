@@ -56,7 +56,6 @@ export class ProductStore {
   async fetchAllProducts() {
     const productsResponse: AxiosResponse<IApiResponse> = await ProductService.getAllProducts();
     const { products: apiProducts } = productsResponse.data;
-    console.log(apiProducts);
     let products: TProducts = [];
     for (const product of apiProducts) {
       products.push({
