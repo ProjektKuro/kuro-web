@@ -14,7 +14,7 @@
     "types": [
       "webpack-env",
       "webpack",
-      "webpack-env"
+      "vuetify"
     ],
     "typeRoots": [
       "src/types",

@@ -13,5 +13,8 @@ module.exports = {
     icons: [{}],
     name: "kuro-web",
     shortName: "kuro-web"
-  }
+  },
+  transpileDependencies: [
+    "vuetify"
+  ]
 }

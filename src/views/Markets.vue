@@ -27,7 +27,11 @@
       </div>
     </div>
 
-    <Market v-for="(shop, i) in shops" :key="`Lang${i}`" :name="shop.name" :address="shop.address" />
+    <v-expansion-panels>
+      <v-expansion-panel v-for="(shop, i) in shops" :key="`Lang${i}`" >
+        <Market :name="shop.name" :address="shop.address" />
+      </v-expansion-panel>
+    </v-expansion-panels>
   </div>
 </template>
 
@@ -148,6 +152,7 @@ export default {
   display: flex;
   flex-flow: row;
   align-content: space-around;
+  margin-bottom: 2rem;
 }
 #position-properties {
   flex-grow: 0;
