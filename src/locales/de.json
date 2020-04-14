@@ -3,7 +3,8 @@
     "ChangeLanguage": "Sprache ändern",
     "da": "Dänisch",
     "de": "Deutsch",
-    "en": "Englisch"
+    "en": "Englisch",
+    "fr": "Französisch"
   },
   "Info": {
     "Info": "Informationen",
@@ -28,7 +29,8 @@
       "Web": "Automatisierung des Deployments",
       "WebHeading": "Web-Client"
     },
-    "WirVsVirusLogo": "#WirVsVirusHack Logo"},
+    "WirVsVirusLogo": "#WirVsVirusHack Logo"
+  },
   "Products": {
     "ProductsIntroText": "Hier können die Produkte von Kuro durchsucht werden. Geben Sie dafür einfach den Namen des gesuchten Produkts in die Suchbox ein.",
     "SearchButtonLabel": "Suchen",
@@ -59,6 +61,7 @@
     "IntroText": "Hier entsteht die Supermarktseite.",
     "Supermarkets": "Supermärkte",
     "Distance": "{distance} Meter",
-    "SorryError": "Sorry, but the following error occurred"
-  }
+    "SorryError": "Entschuldigung, der folgende Fehler ist Aufgetreten"
+  },
+  "User denied Geolocation": "Der Benutzer hat die Positionserfassung verweigert"
 }
