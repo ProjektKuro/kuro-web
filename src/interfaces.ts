@@ -7,6 +7,7 @@ export interface IProductState {
 export interface IProduct {
     categories: string[];
     description: string;
+    image: string;
     name: string;
     productId: string;
 }
@@ -14,6 +15,7 @@ export interface IProduct {
 export interface IApiProduct {
     categories: string[];
     description: string;
+    image: string;
     name: string;
     _id: string;
     updatedAt: string;

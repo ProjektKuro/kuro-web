@@ -23,6 +23,7 @@ export class ProductStore {
     this._selectedProduct = {
       categories: [],
       description: "",
+      image: "",
       name: "",
       productId: ""
     };
@@ -35,12 +36,12 @@ export class ProductStore {
   get allProducts(): TProducts {
     return this._products;
   }
-  
+
   @Getter()
   get selectedProduct(): IProduct {
     return this._selectedProduct;
   }
-  
+
   @Getter()
   get selectedProductId(): string {
     return this._selectedProductId;
@@ -59,6 +60,7 @@ export class ProductStore {
     for (const product of apiProducts) {
       products.push({
         categories: product.categories,
+        image: product.image,
         name: product.name,
         description: product.description,
         productId: product._id
@@ -87,5 +89,5 @@ export class ProductStore {
     this._selectedProductName = productName;
   }
 
- 
+
 }

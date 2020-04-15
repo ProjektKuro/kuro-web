@@ -1,7 +1,7 @@
 <template>
   <div class="product-card" v:bind="prop-product">
     <div class="title">
-      <img class="product-image" src="@/assets/logo.svg" alt="product-logo" />
+      <img class="product-image" :src="product.image" alt="product-logo" />
       <h3 class="product-name">{{ $t(`Products.${product.name}`) }}</h3>
     </div>
     <div class="details">
@@ -26,23 +26,12 @@ export default {
 </script>
 
 <style scoped>
-@media screen and (min-width: 769px) {
-  .title {
-    display: flex;
-    /* min-width: auto; */
-    margin: 0.5rem 0.5rem;
-    hyphens: auto;
-    flex-direction: row;
-  }
-}
-@media screen and (max-width: 768px) {
-  .title {
-    display: flex;
-    /* min-width: auto; */
-    margin: 0.5rem 0.5rem;
-    hyphens: auto;
-    flex-direction: column;
-  }
+.title {
+  display: flex;
+  /* min-width: auto; */
+  margin: 0.5rem 0.5rem;
+  hyphens: auto;
+  flex-direction: row;
 }
 .details {
   padding: 1rem;
@@ -59,7 +48,7 @@ export default {
 }
 .product-name {
   text-align: left;
-  margin-left: 0 0.5rem;
+  margin: 0 0.5rem;
   /* max-width: 4rem; */
 }
 /* .product {

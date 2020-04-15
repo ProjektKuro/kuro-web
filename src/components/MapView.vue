@@ -106,5 +106,7 @@ export default {
   margin-right: 20px;
   margin-left: auto;
   border-radius: 5px;
+  border: 1px solid #c6e2e6;
+  box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.2);
 }
 </style>

@@ -79,8 +79,8 @@ export default {
 .kuro-logo {
   /* text-align: center; */
   /* margin: 0.25rem auto; */
-  height: 7.5rem;
-  width: 7.5rem;
+  /* height: 7.5rem;
+  width: 7.5rem; */
 }
 
 .kuro-header-name {

@@ -20,7 +20,7 @@
 export default {
   name: "LocaleChanger",
   data() {
-    return { langs: ["de", "en", "da", "tr", "fr"] };
+    return { langs: ["de", "en", "fr", "tr", "da"] };
   },
   methods: {
     getIcon(locale) {
@@ -56,13 +56,7 @@ export default {
 .locale-changer img {
   color: white;
   padding: 16px;
-  font-size: 16px;
-  border: none;
   cursor: pointer;
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
   background-color: #c6e2e6;
 }
 
@@ -76,12 +70,7 @@ export default {
   display: none;
   list-style: none;
   position: absolute;
-  min-width:63px;
-  margin: 0;
-  padding: 0;
-  /* background-color: hsl(0, 0%, 98%); */
-  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
-  z-index: 99;
+  z-index: 1099;
 }
 
 .dropdown-content {
@@ -90,8 +79,8 @@ export default {
 }
 /* Images inside the dropdown */
 .dropdown-content img {
-  display: inline-block;
-  max-width: 30px;
+  display: inline-block;    
+  max-width: 40px;
   padding: 10px;
 }
 

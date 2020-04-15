@@ -4,7 +4,7 @@
     <div class="content">
       <router-view />
     </div>
-    <Footer/>
+    <Footer />
   </div>
 </template>
 
@@ -40,7 +40,8 @@ body {
 }
 
 .content {
-  margin: 1rem 1.25rem;
+  margin: 1rem auto;
+  max-width: calc(100% - 1.25rem);
+  width: 1240px;
 }
-
 </style>

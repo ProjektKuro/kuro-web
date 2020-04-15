@@ -1,14 +1,15 @@
 import { Resource } from "./resource";
-enum EProductStatus{
+enum EProductStatus {
     empty = "empty",
     enough = "normal",
     much = "much"
 }
 export class Product extends Resource {
     private _name: string;
+    private _image?: string;
     private _status: string;
     private _categories: string[];
-    constructor (json: any) {
+    constructor(json: any) {
         super(json);
         this._name = json?.name;
         this._status = json?.status;
@@ -20,12 +21,15 @@ export class Product extends Resource {
     get name(): string {
         return this._name;
     }
+    get image(): string {
+        return this._image || require("../assets/logo.svg");
+    }
     get status(): string {
         return this._status;
     }
     set status(statusUpdate: string) {
         // Must be valid Status: "much"
-        if(statusUpdate in EProductStatus) {
+        if (statusUpdate in EProductStatus) {
             //todo: add error notification via snackbar-notifier
             return;
         }
